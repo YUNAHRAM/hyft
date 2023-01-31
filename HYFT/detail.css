@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Pretendard-Regular';
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    background: url('./img/KakaoTalk_20230113_142422658.png');
+    position: absolute;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    backdrop-filter: sepia(20%);
+    background-size: cover;
+}
+
+p {
+    font-size: 1vw;
+}
+
+span {
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h3 {
+    font-size: 1.8vw;
+}
+
+h4 {
+    font-size: 1.6vw;
+}
+
+.detailCnt1_1 {
+    /* position: relative; */
+    margin-top: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: space-between;
+    gap: 0.9vw;
+}
+
+/* 상단 썸네일 */
+.detail1_1 {
+
+    justify-self: end;
+
+
+}
+
+.miniImg {
+
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    width: 16vw;
+    height: 16vw;
+}
+
+.miniImg>img {
+
+    width: 5vw;
+    height: 5vw;
+
+}
+
+.cnt1_1img {
+
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    justify-self: end;
+    align-self: center;
+}
+
+.cnt1_2img {
+    position: absolute;
+    top: 2vw;
+    left: 43.8vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    border: none;
+    z-index: 100;
+}
+
+.imgBox1 {
+    position: absolute;
+    background-color: white;
+    width: 4vw;
+    height: 5.8vw;
+    top: 0vw;
+    left: 43vw;
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+}
+
+/* 상단 가격 박스 */
+.detail1_2 {
+
+    /* position: absolute; */
+    justify-self: start;
+}
+
+.box1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #cacaca4d;
+    height: 10vw;
+    width: 30vw;
+    line-height: 3vw;
+}
+
+.box1>div {
+    text-align: end;
+    margin-right: 0.5vw;
+}
+
+.box2 {
+
+
+    align-items: center;
+    background-color: #D9D9D9;
+    height: 10vw;
+    width: 30vw;
+
+}
+
+.box2_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2vw;
+    line-height: 120%;
+}
+
+.box2_left {
+    text-align: left;
+}
+
+.box2_right {
+    vertical-align: middle;
+    text-align: right;
+}
+
+
+
+.btnp>button {
+    align-self: center;
+    text-align: right;
+    justify-content: end;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+.box3 {
+
+    align-self: center;
+    background-color: #D9D9D9;
+    height: 10vw;
+    width: 30vw;
+}
+
+.box3_box {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 26vw;
+    padding: 1vw 1vw;
+    border-top: 0.1vw solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-self: center;
+    justify-content: center;
+}
+
+.box3_box>h3 {
+    align-self: center;
+    text-align: start;
+    vertical-align: middle;
+}
+
+.box3_box>h2 {
+    align-self: center;
+    text-align: end;
+    vertical-align: middle;
+}
+
+.btnPM {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 0.2vw;
+    align-self: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.4vw;
+    border: none;
+    vertical-align: middle;
+}
+
+.btnB {
+    font-size: 1.4vw;
+    border: none;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10vw;
+    height: 3vw;
+    width: 11vw;
+}
+
+.btncart {
+    background-color: #9B9B9B;
+}
+
+.btnbuy {
+    background-color: #231F20;
+    color: white;
+}
+
+
+/* 디테일 컨테이너 */
+.detailList1>ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vw;
+    border-bottom: 0.1vw solid black;
+    border-top: 0.1vw solid black;
+}
+
+.detailList1>ul>li {
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+
+.detailCnt1_2 {
+    background-color: rgba(0, 0, 0, 21%);
+    height: 86vw;
+    width: 100%;
+    z-index: 90;
+    display: inline-block;
+
+}
+
+.d_img_1 {
+    position: relative;
+
+}
+
+#d_img_1>img {
+    position: relative;
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    z-index: -1;
+    object-position: bottom;
+}
+
+#d_img_1 div {
+    position: absolute;
+    top: 62vw;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    justify-content: center;
+    line-height: 4vw;
+    vertical-align: middle;
+}
+
+#d_img_1 div h4,
+h2 {
+    color: white;
+}
+
+#d_img_2,
+#d_img_3 {
+    width: 100%;
+    text-align: center;
+    object-position: center;
+    justify-content: center;
+}
+
+#d_img_2>img {
+    position: relative;
+    margin-top: 6vw;
+    z-index: -1;
+    width: 50vw;
+    height: 25vw;
+    object-position: center;
+    object-fit: cover;
+    justify-content: center;
+}
+
+#d_img_3>img {
+    position: relative;
+    margin-top: 6vw;
+    z-index: -6;
+    width: 30vw;
+    height: 12vw;
+    object-fit: cover;
+    justify-content: center;
+    object-position: top;
+}
+
+.detail_aria2 {
+    width: 100%;
+    height: 70vw;
+    margin-top: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    object-fit: cover;
+
+}
+
+.detailLeft {
+
+    text-align: end;
+
+}
+
+.detailRight {
+    text-align: start;
+}
+
+.detail_aria2 div img {
+    width: 18vw;
+    height: 18vw;
+}
+
+.detail_aria3 {
+    margin-top: 10vw;
+    background-color: rgba(0, 0, 0, 21%);
+    height: 30vw;
+    width: 100%;
+    z-index: 90;
+    position: relative;
+
+}
+
+.detail_aria3>img {
+    position: relative;
+    width: 50vw;
+    height: 30vw;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 12vw;
+}
+
+.detail_aria3>div {
+    position: absolute;
+    z-index: 100;
+    margin-left: 66vw;
+    text-align: left;
+    top: 50%;
+}
+
+.detail_aria4 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+
+}
+
+.detail_aria4>div {
+    margin-top: 10vw;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.detail_aria4>div>img {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+}
+
+/* 패키지 설명 이미지 */
+.detail_aria5 {
+    margin-top: 10vw;
+
+    justify-content: center;
+    text-align: center;
+}
+
+.detail_aria5>div>div {
+    margin: 0 14vw;
+    line-height: 5vw;
+}
+
+/* 리뷰 컨테이너 */
+.d_review {
+    margin-top: 10vw;
+    border-top: 0.1vw solid black;
+}
+
+.d_box1 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 2vw;
+    margin: 8vw 16vw;
+}
+
+.d_box1>button {
+    border: none;
+}
+
+.d_box1>button,
+input {
+    padding: 0.8vw 4vw;
+    border-radius: 6vw;
+}
+
+.d_box2>div {
+    display: grid;
+    grid-template-columns: 10fr 0.5fr;
+    margin: 3vw 13vw;
+    border-bottom: 0.1vw solid black;
+    justify-content: space-evenly;
+    line-height: 220%;
+}
+
+.d_box2>div>span {
+    display: block;
+}
+
+/* 커뮤니티 컨테이너 */
+.d_community {
+    margin: 6vw 0vw;
+    width: 100%;
+    height: 60vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+}
+
+.d_community>div {
+
+    width: 14vw;
+    height: 20vw;
+    background: #D9D9D9;
+    justify-self: center;
+}
