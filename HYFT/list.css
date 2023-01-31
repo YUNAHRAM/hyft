@@ -7,6 +7,14 @@
 
 }
 
+button {
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+
+}
 
 .cursor {
     width: 3rem;
@@ -61,8 +69,7 @@
 
 html,
 body {
-
-
+    scroll-behavior: smooth;
     position: relative;
     height: 100%;
     width: 100%;
@@ -149,7 +156,7 @@ p {
 }
 
 
-.newArr>img {
+.newArr>a>img {
     position: absolute;
     justify-self: start;
     align-self: center;
@@ -224,9 +231,9 @@ p {
 
 
 .description {
+    cursor: pointer;
     text-align: left;
-    margin-left: 1vw;
-
+    margin-left: 2vw;
 
 }
 
@@ -235,17 +242,14 @@ p {
 }
 
 
-.description>ul>li {
-    font-size: 1.2vw;
-    text-align: right;
-}
+
 
 .imti {
     font-size: 1.2vw;
     gap: 1vw;
     display: flex;
     justify-content: end;
-    margin-right: 1vw;
+    margin-right: 2vw;
 }
 
 .imti>a:first-child {
@@ -256,13 +260,52 @@ p {
     color: black;
 }
 
+
+/* Top 탑 버튼 & 감정 버튼 imoticon 픽스드 */
+#btnScrollToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e62739;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#btnScroll {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 50px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#btnScroll:active {
+    background: rgba(197, 194, 194, 0.25);
+}
+
+#btnScrollToTop:active {
+    background: #cc2333;
+}
+
 /* 태블릿 사이즈 */
 
 @media screen and (max-width: 834px) {
 
     .cnt1-2,
     .cnt1-3 {
-        margin: 6vw 17vw;
+        margin: 6vw 10vw;
     }
 
     .cnt1-1 {
@@ -276,6 +319,10 @@ p {
     }
 
     .feelList {
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: row;
         background-color: #E9DDD4;
@@ -292,17 +339,14 @@ p {
     }
 
     .newArr {
-
         position: relative;
-        display: inline-block;
-
+        display: inline;
         justify-items: center;
         justify-content: center;
         width: 100%;
         height: 30vw;
-        position: absolute;
-        left: 20%;
-        top: 20%;
+        left: 20vw;
+        top: 10vw;
     }
 
 
@@ -333,6 +377,19 @@ p {
         display: none;
     }
 
+    .thumbnail {
+        margin: 2vw 0;
+    }
+
+    .thumbnail>img {
+        margin: 0;
+        width: 24vw;
+        height: 24vw;
+        overflow: hidden;
+        justify-self: center;
+        align-self: center;
+
+    }
 
     .productList {
         border-top: 1px solid black;
@@ -352,7 +409,7 @@ p {
 
     .cnt1-2,
     .cnt1-3 {
-        margin: 4vw 16vw;
+        margin: 4vw 8vw;
     }
 
     .cnt1-2>h2 {
@@ -365,6 +422,34 @@ p {
 
     .cnt1-1 {
         margin: 0;
+    }
+
+    .newArr>.description>div {
+        height: 12vw;
+        padding: 3vw;
+    }
+
+
+
+    .newArr>.description h2 {
+        text-align: center;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .newArr>.description>div span {
+        display: none;
+    }
+
+    .newArr>div>button {
+        left: 32vw;
+        top: 20vw;
+        border-radius: 4vw;
+        padding: 1vw 6vw;
+        width: 24vw;
+        font-size: 0.4vw;
+        font-family: 'Pretendard-Regular';
+
     }
 
     .bestList {
@@ -380,16 +465,25 @@ p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .bestList>li:nth-child(4) {
-        display: list-item;
+    .bestList>li:nth-child(3) {
+        display: none;
     }
 
     .thumbnail>img {
-        width: 26vw;
-        height: 26vw;
+        width: 36vw;
+        height: 36vw;
         overflow: hidden;
         justify-self: center;
         align-self: center;
+        margin: 1vw 0;
+    }
 
+    .productList>li:nth-child(3),
+    :nth-child(7) {
+        display: none;
+    }
+
+    .thumbnail {
+        margin: 2vw -4vw;
     }
 }
