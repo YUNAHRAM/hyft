@@ -7,10 +7,16 @@
 
 }
 
+a {
+    list-style: none;
+    color: #000;
+}
+
 button {
     cursor: pointer;
 }
 
+.thumbnail>div,
 img {
     cursor: pointer;
 
@@ -34,7 +40,7 @@ img {
 }
 
 .cursor:first-child {
-    box-shadow: 5px 5px #D9D9D9;
+    box-shadow: 1px 3px rgba(197, 194, 194, 0.25);
 }
 
 /* 프리텐다드 폰트 */
@@ -135,7 +141,6 @@ p {
 }
 
 .feelList>a {
-
     font-size: 4vw;
     color: #E9DDD4;
     font-family: 'Noto Sans', sans-serif;
@@ -145,19 +150,21 @@ p {
 
 .selected {
     color: #000;
-
 }
 
 /*  New Arrival */
+
+
 .newArr {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-
-.newArr>a>img {
+.newArr>a {
+    background: url(./img/cat1-5.jpg) no-repeat;
     position: absolute;
+    background-size: contain;
     justify-self: start;
     align-self: center;
     width: 26vw;
@@ -165,7 +172,18 @@ p {
     overflow: hidden;
 }
 
-
+.newArr>a:hover {
+    background: url(./img/hover/hover-new.png);
+    position: absolute;
+    justify-self: start;
+    align-self: center;
+    background-size: contain;
+    background-position: center;
+    width: 26vw;
+    height: 26vw;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
 
 .newArr>.description>div {
     left: 29vw;
@@ -194,21 +212,56 @@ p {
 
 }
 
-.thumbnail {
-    margin: 2vw;
-    display: grid;
-    justify-content: space-evenly;
+.bestList {
+    width: 100%;
 
 }
 
-.thumbnail>img {
+.bestList li {
+    display: flex;
+    width: 18vw;
+    height: 18vw;
+}
+
+.thumbnail {
+    background-size: 194px 194px;
+    width: 18vw;
+    height: 18vw;
+    margin: 2vw;
+    display: grid;
+    justify-content: space-evenly;
+}
+
+.thumbnail div {
+
     width: 18vw;
     height: 18vw;
     overflow: hidden;
     justify-self: center;
     align-self: center;
-
 }
+
+.bestImg1>div {
+    /* background: url(./img/alld1-1.JPG); */
+    width: 18vw;
+    height: 18vw;
+    overflow: hidden;
+    justify-self: center;
+    align-self: center;
+    background-position: center;
+}
+
+.bestImg1>div:hover {
+    background: url();
+    width: 18vw;
+    height: 18vw;
+    align-self: center;
+    background-size: contain;
+    background-position: center;
+
+    overflow: hidden;
+}
+
 
 .bestList {
     border-top: 1px solid black;
@@ -218,8 +271,6 @@ p {
     gap: 0.8vw;
 }
 
-
-
 .productList {
     border-top: 1px solid black;
     display: grid;
@@ -227,8 +278,6 @@ p {
     gap: 0.8vw;
 
 }
-
-
 
 .description {
     cursor: pointer;
@@ -269,7 +318,7 @@ p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #e62739;
+    background: #524b4b;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: #ffffff;
     font-size: 30px;
@@ -278,7 +327,25 @@ p {
     cursor: pointer;
 }
 
-#btnScroll {
+#btbScrollToImotion a {
+    width: 38px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.692);
+}
+
+#btbScrollToImotion a img {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    margin: 1px;
+    background: none;
+    box-sizing: border-box;
+
+}
+
+#btnScroll>div:first-child {
+    background-color: #f8f6f6;
     position: fixed;
     right: 20px;
     bottom: 90px;
@@ -289,14 +356,18 @@ p {
     border: none;
     outline: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #btnScroll:active {
-    background: rgba(197, 194, 194, 0.25);
+    background: rgba(233, 229, 229, 0.76);
 }
 
 #btnScrollToTop:active {
-    background: #cc2333;
+    background: #756e6f;
 }
 
 /* 태블릿 사이즈 */

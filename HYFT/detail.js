@@ -1,14 +1,37 @@
 'use strict'
 
 // 마우스 커서 이모티콘 캐릭터로 변경
-   let mouseCursor = document.querySelector(".cursor");
-    let navLinks = document.querySelectorAll(".detail1_1 div div");
-    window.addEventListener("scroll", cursor);
-    window.addEventListener("mousemove", cursor);
-    function cursor(e) {
-        mouseCursor.style.left = e.pageX + "px";
-        mouseCursor.style.top = e.pageY - scrollY + "px";
-    }
+const mouseCursor = document.querySelector(".cursor");
+
+window.addEventListener("scroll", getMousePositionScroll);
+window.addEventListener("mousemove", getMousePosition);
+
+let mouseX = 0;
+let mouseY = 0;
+let mouseClientY = 0;
+let mousePageY = 0;
+function getMousePositionScroll() {    
+    mouseY = document.documentElement.scrollTop + mouseClientY;
+}
+
+function getMousePosition(e) {        
+    mouseX = e.clientX + 1;
+    mouseClientY = e.clientY;    
+    mousePageY = e.pageY;
+    
+    getMousePositionScroll();
+    console.log('move : ' + mouseY);
+}
+
+function moveCursor() {
+    const cursorStyle = getComputedStyle(mouseCursor);
+    let m_x = parseInt(cursorStyle.left.replace('px', ''));
+    let m_y = parseInt(cursorStyle.top.replace('px', ''));
+
+    mouseCursor.style.left = Math.round(m_x + ((mouseX - m_x) / 5)) + 'px';
+    mouseCursor.style.top = Math.round(m_y + ((mouseY - m_y) / 5)) + 'px';
+}
+setInterval('moveCursor()', 30);
 
 // 반응형 리사이즈 사이즈 변경 태블릿 사이즈
 function tabResize() {
@@ -36,7 +59,7 @@ tabResize();
 //리본 텍스트 스크롤 애니메이션     
 
 const pTag1 = document.querySelector('.first-parallel');
-    const pTag2 = document.querySelector('.second-parallel');
+const pTag2 = document.querySelector('.second-parallel');
 
 const textArr1 = 'HYFT HOW YOU FEEL TODAY HYFT HOW YOU FEEL TODAY '.split(' ');
 const textArr2 = 'CIRCUS BOY BAND HUG FIGURE CIRCUS BOY BAND HUG FIGURE'.split(' ');
