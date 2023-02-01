@@ -11,7 +11,7 @@ let mouseCursor = document.
     }
     
 //NEW 상품이미지 스와이프
-const img = document.querySelector(".newArr>img");
+const img = document.querySelector(".newArr>a>img");
 let imgArray = new Array();
 imgArray[0] = "./img/cat1-5.jpg";
 imgArray[1] = "./img/cat1-2.jpg";
@@ -25,7 +25,7 @@ function changeImage() {
   imgCnt++;
   if (imgCnt < imgArray.length) {
     img.src = imgArray[imgCnt];
-    setTimeout("changeImage()", 800);
+    setTimeout(changeImage, 800);
   } else {
     imgCnt = 0; // loop
     changeImage();
@@ -35,7 +35,7 @@ function startAnimation() {
   window.setTimeout(changeImage, 100);
 }
 
-window.onload = startAnimation;
+
 
 
 //BEST 상품이미지 스와이프
@@ -63,7 +63,10 @@ function startAnimation1() {
   window.setTimeout(changeImage1, 100);
 }
 
-//  window.onload = startAnimation1;
+window.onload = function () {
+    startAnimation()
+  startAnimation1()   
+ };
 
 
 //clk  클릭 이벤트 클릭시 이동하기
