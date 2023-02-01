@@ -3,7 +3,6 @@
         "img_picture": "./img/bear1-7.jpg",
         "img_overEffect": "./img/hover/bear1-1.jpg",
         "product_number": "cbb_023",
-       
         "product_name": "Bear Hug Boy",
         "price": 25000,
         "href": "list.html"
@@ -12,7 +11,6 @@
         "img_picture": "./img/duck3.jpg",
         "img_overEffect": "./img/hover/duck1-1.jpg",
         "product_number": "cbb_011",
-       
         "product_name": "circus duck",
         "price": 25000,
         "href": "list.html"
@@ -21,7 +19,6 @@
         "img_picture": "./img/dog1-7.jpg",
         "img_overEffect": "./img/hover/dog1-1.jpg",
         "product_number": "cbb_004",
-        
         "product_name": "Dog Hug Boy",
         "price": 25000,
         "href": "list.html"
@@ -33,70 +30,6 @@
         "product_feel": "lonley",
         "product_name": "Cbb cmile cup",
         "price": 15000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/dd1-1.jpg",
-        "img_overEffect": "./img/hover/dd1-2.jpg",
-        "product_number": "hobby_007",
-        "product_name": "Hand made bag",
-        "price": 18000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/wduck1-5.jpg",
-        "img_overEffect": "./img/hover/wduck1-1.jpg",
-        "product_number": "cbb_012",
-        "product_name": "circus Duck ",
-        "price": 25000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/b1-3.jpg",
-        "img_overEffect": "./img/hover/b1-2.jpg",
-        "product_number": "cbb_003",
-        "product_name": "penguin cup",
-        "price": 15000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/alld1-1.jpg",
-        "img_overEffect": "./img/hover/alld1-2.jpg",
-        "product_number": "cbb_007",
-        "product_name": "All duck series",
-        "price": 139000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/cat1-7.jpg",
-        "img_overEffect": "./img/hover/cat1-5.jpg",
-        "product_number": "cbb_045",
-        "product_name": "Cat Hug Boy (special)",
-        "price": 25000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/e1-1.jpg",
-        "img_overEffect ": "./img/hover/e1-2.jpg",
-        "product_number": "poster_015",
-        "product_name": "snow poster",
-        "price": 12000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/bear1-8.jpg",
-        "img_overEffect": "./img/hover/bear1-1.jpg",
-        "product_number": "cbb_023",
-        "product_name": "Bear Hug Boy",
-        "price": 25000,
-        "href": "list.html"
-    },
-    {
-        "img_picture": "./img/cat2-7.jpg",
-        "img_overEffect": "./img/hover/cat2-1.jpg",
-        "product_number": "cbb_005",
-        "product_name": "Cat Hug Boy",
-        "price": 25000,
         "href": "list.html"
     }
 ]

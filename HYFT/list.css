@@ -212,16 +212,6 @@ p {
 
 }
 
-.bestList {
-    width: 100%;
-
-}
-
-.bestList li {
-    display: flex;
-    width: 18vw;
-    height: 18vw;
-}
 
 .thumbnail {
     background-size: 194px 194px;
@@ -263,7 +253,24 @@ p {
 }
 
 
+.bestList li {
+    display: flex;
+    width: 18vw;
+    height: 18vw;
+    /* overflow: hidden; */
+
+}
+
+.bestList li img {
+    display: flex;
+    width: 18vw;
+    height: 18vw;
+    overflow: hidden;
+    margin-top: 2vw;
+}
+
 .bestList {
+    width: 100%;
     border-top: 1px solid black;
     justify-content: space-evenly;
     display: grid;
@@ -312,6 +319,7 @@ p {
 
 /* Top 탑 버튼 & 감정 버튼 imoticon 픽스드 */
 #btnScrollToTop {
+    overflow: hidden;
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -328,10 +336,11 @@ p {
 }
 
 #btbScrollToImotion a {
-    width: 38px;
-    overflow: hidden;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.692);
+    background: rgba(0, 0, 0, 0.692);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.692); */
 }
 
 #btbScrollToImotion a img {

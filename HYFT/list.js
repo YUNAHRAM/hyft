@@ -111,12 +111,13 @@ const $bestList = document.querySelector('.bestList');
 const $thumImg=document.createElement("IMG")
 // const $thumImg = new Image();
 // $thumImg.src='./img/cat1-6.jpg'
-// $thumbnail.forEach((item,idx) => { 
+    
+    // $bestList.forEach((item, idx) => { 
 
-//     item.addEventListener('mouseover', function () {
-//         item.style.background = "url('./img/cat1-6.jpg')";
-//         item.style.backgroundSize="cover";
-//          console.log('되나염?')
+    // item.addEventListener('mouseover', function () {
+    //      item.style.background = "url('./img/cat1-6.jpg')";
+    //     item.style.backgroundSize="cover";
+    //      console.log('되나염?')
        
 //   });
 // });
@@ -198,10 +199,19 @@ const $thumImg=document.createElement("IMG")
       .then(result => {
         makeList(result);
       });
-
+  fetch('./best.json')
+      .then(res => res.json())
+      .then(result1 => {
+        listList(result1);
+      });
+function listList(items) {
+    items.forEach((item, idx) => { 
+        console.log('이건가');
+    })}
     
 function makeList(items) {
     items.forEach((item, idx) => {
+        
        
             const $li = document.createElement('li');
             console.log(item.img_picture);
