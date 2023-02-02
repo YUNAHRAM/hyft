@@ -15,7 +15,7 @@ function getMousePositionScroll() {
 }
 
 function getMousePosition(e) {        
-    mouseX = e.clientX + 1;
+    mouseX = e.clientX + 20;
     mouseClientY = e.clientY;    
     mousePageY = e.pageY;
     
