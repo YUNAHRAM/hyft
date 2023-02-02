@@ -10,7 +10,7 @@
     },
     {
         "img_picture": "./img/best2.jpg",
-        "img_overEffect": "./img/hover/duck1-1.jpg",
+        "img_overEffect": "./img/hover/hover-best2.png",
         "product_number": "Made by ME_no.03",
         "product_feel": "lonley",
         "product_name": "hand made by Me",
@@ -19,7 +19,7 @@
     },
     {
         "img_picture": "./img/best3.jpg",
-        "img_overEffect": "./img/hover/dog1-1.jpg",
+        "img_overEffect": "./img/hover/hover-best3.png",
         "product_number": "circus boy band_004",
         "product_feel": "lonley",
         "product_name": "sunrise cup",
@@ -28,7 +28,7 @@
     },
     {
         "img_picture": "./img/best4.jpg",
-        "img_overEffect": "./img/hover/d1-1.jpg",
+        "img_overEffect": "./img/hover/hover-best4.png",
         "product_number": "circus boy band_015",
         "product_feel": "lonley",
         "product_name": "Cbb Duck figure",

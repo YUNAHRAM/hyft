@@ -20,7 +20,7 @@ function getMousePosition(e) {
     mousePageY = e.pageY;
     
     getMousePositionScroll();
-    console.log('move : ' + mouseY);
+    // console.log('move : ' + mouseY);
 }
 
 function moveCursor() {
@@ -69,36 +69,33 @@ $btnScrollToTop.addEventListener("click", function () {
 });
 
 // detail 디테일 / 리뷰 / 커뮤니티 버튼 위치 스크롤 이동 
-const $detailPage = document.querySelector('.detailPage');
-$detailPage.addEventListener("click", function () {
-    // window.scrollTo(0,0);
+// const $detailPage = document.querySelector('.detailPage');
+// $detailPage.addEventListener("click", function () {
+//     // window.scrollTo(0,0);
 
-    window.scrollTo({
-        top:30,
-        left: 0,
-        behavior: "smooth"
-    });
-});
-const $reviewPage = document.querySelector('.reviewPage');
-$reviewPage.addEventListener("click", function () {
-    // window.scrollTo(0,0);
+//     window.scrollTo({
+       
+//         behavior: "smooth"
+//     });
+// });
+// const $reviewPage = document.querySelector('.reviewPage');
+// $reviewPage.addEventListener("click", function () {
+   
 
-    window.scrollTo({
-        top: 5200,
-        left: 0,
-        behavior: "smooth"
-    });
-});
-const $communityPage = document.querySelector('.communityPage');
-$communityPage.addEventListener("click", function () {
-    // window.scrollTo(0,0);
+//     window.scrollTo({
+        
+//         behavior: "smooth"
+//     });
+// });
+// const $communityPage = document.querySelector('.communityPage');
+// $communityPage.addEventListener("click", function () {
+    
 
-    window.scrollTo({
-        top: 9200,
-        left:0,
-        behavior: "smooth"
-    });
-});
+//     window.scrollTo({
+       
+//         behavior: "smooth"
+//     });
+// });
 
 
 

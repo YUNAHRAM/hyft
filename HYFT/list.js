@@ -154,7 +154,7 @@ function listList(items) {
           </div>
           <div class="list_text">
                 <ul class="imti">
-                    <li><i class="fi fi-rr-heart"></i></li>
+                    <li class="heartBtn"><i class="fi fi-rr-heart"></i></li>
                     <li><i class="fi fi-rr-shopping-cart"></i></li>
                 </ul>
               <span>${item.product_number}</span>
@@ -164,14 +164,27 @@ function listList(items) {
       </div>`;
         $productList.appendChild($li);
     });
+     //heart 좋아요 버튼 클릭 토글 이벤트 하트 버튼 색깔
+        const $heartBtn = document.querySelectorAll('.heartBtn');
+        const $heart = document.querySelectorAll('.heartBtn i')
+        const $buyBtn = document.querySelector('.buyBtn');
+        console.log($heartBtn)
+        $heartBtn.forEach((icon) => {
+            icon.addEventListener('click', (icon) => {
+
+                icon.target.classList.toggle("fi-rr-heart");
+                icon.target.classList.toggle("fi-ss-heart");
+            });
+        });
 }
     
 function makeList(items) {
     items.forEach((item, idx) => {
+        
             const $li = document.createElement('li');
          
             $li.innerHTML = `
-      <div>
+        <div>
           <div class="best_img">
               <img src="${item.img_picture}" alt="">
           </div>
@@ -186,48 +199,50 @@ function makeList(items) {
           </div>
       </div>`;
        
-            $bestList.appendChild($li);
-        
+        $bestList.appendChild($li);
+
+        hoverEvent(items);
     });
-    //heart 좋아요 버튼 클릭 토글 이벤트를 하고 싶었던 나으 흔적.
-const $heartBtn = document.querySelectorAll('.heartBtn');
-const $heart = document.querySelectorAll('.heartBtn i')
-const $buyBtn = document.querySelector('.buyBtn');
-console.log($heartBtn)
-$heartBtn.forEach((e) => {
-    e.addEventListener('click',(e)=>{
-    e.target.classList.toggle("fi-rr-heart");
-    e.target.classList.toggle("fa-heart");
-})
-})
-        
-};
+}    
+
+function hoverEvent(item) {
+    console.log(item)
+    const $hoverMouse = document.querySelectorAll('.best_img')
+    $hoverMouse.forEach((ele, idx) => {
+        ele.addEventListener('mouseover', (e) => {
+            console.log('해야되나')
+            ele.innerHTML =
+                `<img src="${item[idx].img_overEffect}"
+            alt="">`
+        });
+        ele.addEventListener('mouseout', (e) => {
+            console.log('왜안되')
+            ele.innerHTML =
+                `<img src="${item[idx].img_picture}"
+            alt="">`
+        });
+    });
+}
+    
+    //heart 좋아요 버튼 클릭 토글 이벤트 하트 버튼 색깔
+        const $heartBtn = document.querySelectorAll('.heartBtn');
+        const $heart = document.querySelectorAll('.heartBtn i')
+        const $buyBtn = document.querySelector('.buyBtn');
+        console.log($heartBtn)
+        $heartBtn.forEach((icon) => {
+            icon.addEventListener('click', (icon) => {
+
+                icon.target.classList.toggle("fi-rr-heart");
+                icon.target.classList.toggle("fi-ss-heart");
+            });
+        });
+         
 
 
 
 
 
-    //    items.forEach((item, idx) => {
-    //         makeList.addEventListener("mouseover", function () {
-    //             makeList.src = "${item.img_overEffect}";
-    //         });
-    //         makeList.addEventListener("mouseout", function () {
-    //             makeList.src = "${item.img_picture}";
-    //         });
-    //     });
-
-        // const state='off'
-
-        // heart 하트 버튼 클릭시 색상 변경 토글 버튼
-// heart.onclick = function () {
-//     if (state === 'off') {
-//         <i class="fi fi-rs-heart"></i>;
-//         state="on"
-//     } else {
-//         <i class="fi fi-rr-heart"></i>;
-//         state = "off";
-//             }
-//         }
+    
 
 
 // const $thumImg = new Image();
