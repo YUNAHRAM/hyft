@@ -25,7 +25,7 @@ img {
 .cursor {
     width: 3rem;
     height: 3rem;
-    background: url('./img/KakaoTalk_20230113_142422658.png');
+    background: url('./img/SVG/LONELY.svg');
     position: absolute;
     z-index: 1000;
     transform: translate(-50%, -50%);
@@ -39,9 +39,10 @@ img {
     border-radius: 100%;
 }
 
-.cursor:first-child {
-    box-shadow: 1px 3px rgba(197, 194, 194, 0.25);
-}
+/* .cursor:first-child {
+
+    box-shadow: 10px 0px rgba(197, 194, 194, 0.25);
+} */
 
 /* 프리텐다드 폰트 */
 @font-face {
@@ -98,10 +99,17 @@ h3 {
     line-height: 3vw;
 }
 
+h4 {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.2vw;
+    text-align: start;
+    line-height: 2.5vw;
+}
+
 span {
     font-family: 'Pretendard-Regular';
     text-align: center;
-    line-height: 2vw;
+    line-height: 1.6vw;
     font-size: 1vw;
 }
 
@@ -128,7 +136,10 @@ p {
 
 .cnt1-2,
 .cnt1-3 {
-    margin: 10vw 12vw;
+    margin: 14vw 12vw;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 
@@ -173,7 +184,7 @@ p {
 }
 
 .newArr>a:hover {
-    background: url(./img/hover/hover-new.png);
+    background: url(./img/hovers/hover-new.png);
     position: absolute;
     justify-self: start;
     align-self: center;
@@ -209,56 +220,13 @@ p {
     width: 18vw;
     font-size: 1vw;
     font-family: 'Pretendard-Regular';
-
-}
-
-
-.thumbnail {
-    background-size: 194px 194px;
-    width: 18vw;
-    height: 18vw;
-    margin: 2vw;
-    display: grid;
-    justify-content: space-evenly;
-}
-
-.thumbnail div {
-
-    width: 18vw;
-    height: 18vw;
-    overflow: hidden;
-    justify-self: center;
-    align-self: center;
-}
-
-.bestImg1>div {
-    /* background: url(./img/alld1-1.JPG); */
-    width: 18vw;
-    height: 18vw;
-    overflow: hidden;
-    justify-self: center;
-    align-self: center;
-    background-position: center;
-}
-
-.bestImg1>div:hover {
-    background: url();
-    width: 18vw;
-    height: 18vw;
-    align-self: center;
-    background-size: contain;
-    background-position: center;
-
-    overflow: hidden;
 }
 
 
 .bestList li {
     display: flex;
-    width: 18vw;
-    height: 18vw;
-    /* overflow: hidden; */
-
+    justify-content: space-evenly;
+    cursor: pointer;
 }
 
 .bestList li img {
@@ -269,6 +237,16 @@ p {
     margin-top: 2vw;
 }
 
+.bestList .imti {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin-right: 6px;
+    width: 18vw;
+    height: 4vw;
+
+}
+
 .bestList {
     width: 100%;
     border-top: 1px solid black;
@@ -276,43 +254,52 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(23%, auto));
     gap: 0.8vw;
+    align-items: center;
 }
 
 .productList {
+    width: 100%;
     border-top: 1px solid black;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(23%, auto));
     gap: 0.8vw;
-
+    /* margin-top: 2vw; */
+    justify-content: space-evenly;
 }
 
-.description {
-    cursor: pointer;
-    text-align: left;
-    margin-left: 2vw;
-
-}
-
-.feelImt {
-    display: inline-block;
-}
-
-
-
-
-.imti {
-    font-size: 1.2vw;
-    gap: 1vw;
+.productList li {
+    justify-content: space-evenly;
     display: flex;
-    justify-content: end;
-    margin-right: 2vw;
+    cursor: pointer;
 }
 
-.imti>a:first-child {
+.productList li img {
+    display: flex;
+    width: 18vw;
+    height: 18vw;
+    overflow: hidden;
+    margin-top: 2vw;
+}
+
+.productList .imti {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin-right: 6px;
+    width: 18vw;
+    height: 4vw;
+}
+
+.imti li i {
+    width: 2vw;
+    height: 2vw;
+}
+
+.imti>li:first-child {
     color: red;
 }
 
-.imti>a:nth-child(2) {
+.imti>li:nth-child(2) {
     color: black;
 }
 
@@ -335,15 +322,9 @@ p {
     cursor: pointer;
 }
 
-#btbScrollToImotion a {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.692);
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.692); */
-}
 
-#btbScrollToImotion a img {
+
+#btnScrollToImotion a img {
     overflow: hidden;
     width: 40px;
     height: 40px;
@@ -354,14 +335,14 @@ p {
 }
 
 #btnScroll>div:first-child {
-    background-color: #f8f6f6;
+    background-color: #fff;
     position: fixed;
     right: 20px;
     bottom: 90px;
     width: 50px;
     height: 300px;
     border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
     border: none;
     outline: none;
     cursor: pointer;
@@ -378,6 +359,8 @@ p {
 #btnScrollToTop:active {
     background: #756e6f;
 }
+
+
 
 /* 태블릿 사이즈 */
 
@@ -453,6 +436,11 @@ p {
 
     }
 
+    .bestList li img {
+        width: 24vw;
+        height: 24vw;
+    }
+
     .bestList>li:nth-child(4) {
         display: none;
     }
@@ -477,8 +465,13 @@ p {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .productList li img {
+        width: 24vw;
+        height: 24vw;
+    }
+
     .productList>li:nth-child(4),
-    :nth-child(8) {
+    li:nth-child(8) {
         display: none;
     }
 }

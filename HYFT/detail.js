@@ -56,6 +56,52 @@ function tabResize() {
 tabResize();
  
 
+// fixed 버튼 스크롤 탑으로 이동 
+const $btnScrollToTop = document.querySelector('#btnScrollToTop');
+$btnScrollToTop.addEventListener("click", function () {
+    // window.scrollTo(0,0);
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+});
+
+// detail 디테일 / 리뷰 / 커뮤니티 버튼 위치 스크롤 이동 
+const $detailPage = document.querySelector('.detailPage');
+$detailPage.addEventListener("click", function () {
+    // window.scrollTo(0,0);
+
+    window.scrollTo({
+        top:30,
+        left: 0,
+        behavior: "smooth"
+    });
+});
+const $reviewPage = document.querySelector('.reviewPage');
+$reviewPage.addEventListener("click", function () {
+    // window.scrollTo(0,0);
+
+    window.scrollTo({
+        top: 5200,
+        left: 0,
+        behavior: "smooth"
+    });
+});
+const $communityPage = document.querySelector('.communityPage');
+$communityPage.addEventListener("click", function () {
+    // window.scrollTo(0,0);
+
+    window.scrollTo({
+        top: 9200,
+        left:0,
+        behavior: "smooth"
+    });
+});
+
+
+
 //리본 텍스트 스크롤 애니메이션     
 
 const pTag1 = document.querySelector('.first-parallel');

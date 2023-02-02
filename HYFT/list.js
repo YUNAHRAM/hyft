@@ -33,7 +33,7 @@ function moveCursor() {
 setInterval('moveCursor()', 30);
 
 
-//clk  클릭 이벤트 클릭시 이동하기
+//감정 이모티콘 feelList clk클릭 이벤트 클릭시 이동하기
 //토글 만들기
 const $clk = document.querySelectorAll(".clickE");
 
@@ -42,6 +42,20 @@ $clk.forEach(function (click) {
     click.classList.toggle("selected");
   });
 });
+
+
+// const btnScrollToImotion = document.getElementById('#btnScrollToImotion');
+// const imgs = btnScrollToImotion.querySelectorAll('.btnScrollToImotion>img');
+
+
+// $clk.forEach(item => {
+ 
+//   item.addEventListener('click', function() {
+//     for (let i = 0; i < imgs.length; i++) {
+    
+//     }
+//   });
+// });
 
 
 
@@ -108,7 +122,114 @@ $btnLonley.className = 'btnLonley';
 
 //BEST , LIST 이미지 마우스 호버 이미지 변경
 const $bestList = document.querySelector('.bestList');
-const $thumImg=document.createElement("IMG")
+const $productList = document.querySelector('.productList');
+const $thumImg = document.createElement("IMG")
+
+
+
+
+
+// jason 페치
+      fetch('./best.json')
+      .then(res => res.json())
+      .then(result => {
+        makeList(result);
+      });
+    fetch('./list.json')
+      .then(res => res.json())
+      .then(result1 => {
+        listList(result1);
+      });
+
+function listList(items) {
+    items.forEach((item, idx) => {
+        
+        const $li = document.createElement('li');
+       
+           
+        $li.innerHTML = `
+      <div>
+          <div class="list_img">
+              <img src="${item.img_picture}" alt="">
+          </div>
+          <div class="list_text">
+                <ul class="imti">
+                    <li><i class="fi fi-rr-heart"></i></li>
+                    <li><i class="fi fi-rr-shopping-cart"></i></li>
+                </ul>
+              <span>${item.product_number}</span>
+              <h4>${item.product_name}</h4>
+              <h4>${item.price}</h4>
+          </div>
+      </div>`;
+        $productList.appendChild($li);
+    });
+}
+    
+function makeList(items) {
+    items.forEach((item, idx) => {
+            const $li = document.createElement('li');
+         
+            $li.innerHTML = `
+      <div>
+          <div class="best_img">
+              <img src="${item.img_picture}" alt="">
+          </div>
+          <div class="best_text">
+                <ul class="imti">
+                    <li class="heartBtn flipped"><i class="fi fi-rr-heart"></i></li>
+                    <li class="buyBtn"><i class="fi fi-rr-shopping-cart"></i></li>
+                </ul>
+              <span>${item.product_number}</span>
+              <h4>${item.product_name}</h4>
+              <h4>${item.price}</h4>
+          </div>
+      </div>`;
+       
+            $bestList.appendChild($li);
+        
+    });
+    //heart 좋아요 버튼 클릭 토글 이벤트를 하고 싶었던 나으 흔적.
+const $heartBtn = document.querySelectorAll('.heartBtn');
+const $heart = document.querySelectorAll('.heartBtn i')
+const $buyBtn = document.querySelector('.buyBtn');
+console.log($heartBtn)
+$heartBtn.forEach((e) => {
+    e.addEventListener('click',(e)=>{
+    e.target.classList.toggle("fi-rr-heart");
+    e.target.classList.toggle("fa-heart");
+})
+})
+        
+};
+
+
+
+
+
+    //    items.forEach((item, idx) => {
+    //         makeList.addEventListener("mouseover", function () {
+    //             makeList.src = "${item.img_overEffect}";
+    //         });
+    //         makeList.addEventListener("mouseout", function () {
+    //             makeList.src = "${item.img_picture}";
+    //         });
+    //     });
+
+        // const state='off'
+
+        // heart 하트 버튼 클릭시 색상 변경 토글 버튼
+// heart.onclick = function () {
+//     if (state === 'off') {
+//         <i class="fi fi-rs-heart"></i>;
+//         state="on"
+//     } else {
+//         <i class="fi fi-rr-heart"></i>;
+//         state = "off";
+//             }
+//         }
+
+
 // const $thumImg = new Image();
 // $thumImg.src='./img/cat1-6.jpg'
     
@@ -194,44 +315,6 @@ const $thumImg=document.createElement("IMG")
     //     bestItem = result2;
     //   });
 // }
-      fetch('./list.json')
-      .then(res => res.json())
-      .then(result => {
-        makeList(result);
-      });
-  fetch('./best.json')
-      .then(res => res.json())
-      .then(result1 => {
-        listList(result1);
-      });
-function listList(items) {
-    items.forEach((item, idx) => { 
-        console.log('이건가');
-    })}
-    
-function makeList(items) {
-    items.forEach((item, idx) => {
-        
-       
-            const $li = document.createElement('li');
-            console.log(item.img_picture);
-            console.log('여긴가')
-            $li.innerHTML = `
-      <a href="">
-          <div class="best_img">
-              <img src="${item.img_picture}" alt="">
-          </div>
-          <div class="best_text">
-              <span>${item.product_number}</span>
-              <h2>${item.product_name}</h2>
-              <span>${item.price}</span>
-          </div>
-      </a>`;
-            $bestList.appendChild($li);
-        
-    });
-        
-      };
 
 
 // function makeBest(item) {
