@@ -33,29 +33,43 @@ function moveCursor() {
 setInterval('moveCursor()', 30);
 
 
-//감정 이모티콘 feelList clk클릭 이벤트 클릭시 이동하기
+
+
+//감정 feelList clk클릭 이벤트 클릭시 이동하기
 //토글 만들기
-const $clk = document.querySelectorAll(".clickE");
-
-$clk.forEach(function (click) {
-  click.addEventListener("click", function () {
-    click.classList.toggle("selected");
-  });
-});
+const $iClk = document.querySelectorAll(".clickE");
 
 
-// const btnScrollToImotion = document.getElementById('#btnScrollToImotion');
-// const imgs = btnScrollToImotion.querySelectorAll('.btnScrollToImotion>img');
 
 
-// $clk.forEach(item => {
- 
-//   item.addEventListener('click', function() {
-//     for (let i = 0; i < imgs.length; i++) {
-    
-//     }
-//   });
-// });
+
+    // $iClk.forEach((imot,idx)=> {
+       
+    //     $btnScrollToImotion.forEach((imo, idx) => {
+    //         imo.addEventListener("click", function () {
+    //             console.log('감정배열')
+    //             click.classList.toggle("selected");
+    //             mouseCursor.src = imo.target.src
+    //         });
+    //     });
+        
+    // });
+ const $btnScrollToImotion = document.querySelectorAll('#btnScrollToImotion');
+const imgs = btnScrollToImotion.querySelectorAll('.btnScrollToImotion>img');
+
+
+$btnScrollToImotion.forEach((img, idx) => {
+    img.addEventListener('click', (e) => {
+        console.log(e.target)
+        console.log('백그라운드')
+
+      document.getElementById("cursor").style.backgroundImage = e.target.src
+    })
+})
+
+
+
+
 
 
 
@@ -96,23 +110,23 @@ $btnScrollToTop.addEventListener("click", function () {
 
 
 // fixed imotion 감정 이모티콘 버튼 스크롤 따라다니기 
-const btnScroll = document.querySelector("#btnScroll");
+// const btnScroll = document.querySelector("#btnScroll");
 
-const $div = document.createElement("div");
-$div.className = 'btnScrollToImotion';
+// const $div = document.createElement("div");
+// $div.className = 'btnScrollToImotion';
 
-// const $btnHappy = document.createElement(".btnScrollToImotion");
-// $btnHappy.className = 'btnHappy';
-const $btnBored = document.createElement("div");
-$btnBored.className = 'btnBored';
-const $btnSad = document.createElement("div");
-$btnSad.className = 'btnSad';
-const $btnNervous = document.createElement("div");
-$btnNervous.className = 'btnNervous';
-const $btnAngry = document.createElement("div");
-$btnAngry.className = 'btnAngry';
-const $btnLonley = document.createElement("div");
-$btnLonley.className = 'btnLonley';
+// // const $btnHappy = document.createElement(".btnScrollToImotion");
+// // $btnHappy.className = 'btnHappy';
+// const $btnBored = document.createElement("div");
+// $btnBored.className = 'btnBored';
+// const $btnSad = document.createElement("div");
+// $btnSad.className = 'btnSad';
+// const $btnNervous = document.createElement("div");
+// $btnNervous.className = 'btnNervous';
+// const $btnAngry = document.createElement("div");
+// $btnAngry.className = 'btnAngry';
+// const $btnLonley = document.createElement("div");
+// $btnLonley.className = 'btnLonley';
 
 // $btnHappy.innerHTML = ``
 
@@ -124,9 +138,6 @@ $btnLonley.className = 'btnLonley';
 const $bestList = document.querySelector('.bestList');
 const $productList = document.querySelector('.productList');
 const $thumImg = document.createElement("IMG")
-
-
-
 
 
 // jason 페치
@@ -201,16 +212,17 @@ function makeList(items) {
        
         $bestList.appendChild($li);
 
-        hoverEvent(items);
     });
+    hoverEvent(items);
 }    
 
 function hoverEvent(item) {
     console.log(item)
     const $hoverMouse = document.querySelectorAll('.best_img')
     $hoverMouse.forEach((ele, idx) => {
+        console.log(ele)
         ele.addEventListener('mouseover', (e) => {
-            console.log('해야되나')
+            // console.log('aa')
             ele.innerHTML =
                 `<img src="${item[idx].img_overEffect}"
             alt="">`

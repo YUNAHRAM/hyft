@@ -5,7 +5,14 @@
     box-sizing: border-box;
     text-decoration: none;
 
+
+    /* 드래그 방지 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
+
 
 button {
     font-size: 1vw;
@@ -27,6 +34,7 @@ button {
     background-size: cover;
     background-color: none;
 }
+
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -63,8 +71,12 @@ html,
 body {
     scroll-behavior: smooth;
     width: 100%;
-    height: 700vh;
+    height: 900vh;
 
+}
+
+header {
+    height: 120px;
 }
 
 p {
@@ -115,15 +127,20 @@ h4 {
 }
 
 .miniImg {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 14vw;
-    height: 14vw;
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    justify-content: center;
+    width: 24vw;
+    height: 6vw;
+
+
 }
 
 .miniImg>img {
-    width: 4vw;
-    height: 4vw;
+    width: 5vw;
+    height: 5vw;
+    padding: 0.2vw;
+    cursor: pointer;
 }
 
 .cnt1_1img {
@@ -610,7 +627,7 @@ input {
 }
 
 .d_community>div>div {
-  
+
     width: 16vw;
     height: 18vw;
     background: #faf4f444;
@@ -648,7 +665,7 @@ input {
     z-index: 150;
 }
 
-#btnScrollToImotion a img {
+#btnScrollToImotion img {
     z-index: 150;
     overflow: hidden;
     width: 40px;
@@ -730,6 +747,10 @@ input {
         left: 50vw;
         font-size: 70%;
         width: 17vw;
+    }
+
+    .box1_text {
+        margin-top: 14vw;
     }
 
     .box1_text>span {

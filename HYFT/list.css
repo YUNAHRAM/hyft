@@ -5,6 +5,11 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    /* 드래그 방지 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
 
 a {
@@ -21,6 +26,10 @@ button {
 img {
     cursor: pointer;
 
+}
+
+header {
+    height: 120px;
 }
 
 .cursor {
@@ -152,7 +161,7 @@ p {
 
 }
 
-.feelList>a {
+.feelList li {
     font-size: 3vw;
     color: #E9DDD4;
     font-family: 'Noto Sans', sans-serif;
@@ -326,7 +335,7 @@ p {
 
 
 
-#btnScrollToImotion a img {
+#btnScrollToImotion img {
     overflow: hidden;
     width: 40px;
     height: 40px;
@@ -394,7 +403,7 @@ p {
         position: absolute;
     }
 
-    .feelList>a {
+    .feelList li {
         justify-content: space-evenly;
         text-align: center;
         padding: 1vw;
@@ -461,15 +470,13 @@ p {
     }
 
     .imti li i {
-
+        font-size: 16px;
         padding: 1.4vw;
         width: 1vw;
         height: 1vw;
     }
 
-    /* .thumbnail {
-        margin: 2vw 0;
-    } */
+
 
     .thumbnail>img {
         margin: 0;
@@ -498,8 +505,7 @@ p {
     }
 
     #btnScrollToTop {
-
-        right: 14vw;
+        right: 6vw;
         bottom: 2vw;
         width: 6vw;
         height: 6vw;
@@ -514,36 +520,23 @@ p {
         cursor: pointer;
     }
 
-
-
-    #btnScrollToImotion a img {
+    #btnScrollToImotion img {
         overflow: hidden;
-        width: 5.4vw;
-        height: 5.4vw;
+        width: 5vw;
+        height: 5vw;
         margin: 0.2vw;
         background: none;
         box-sizing: border-box;
-
     }
 
     #btnScroll>div:first-child {
         background-color: #fff;
         position: fixed;
-        right: 14vw;
+        right: 6vw;
         bottom: 9vw;
         width: 6vw;
         height: 38vw;
-
     }
-
-    #btnScroll:active {
-        background: rgba(233, 229, 229, 0.76);
-    }
-
-    #btnScrollToTop:active {
-        background: #756e6f;
-    }
-
 
 }
 
@@ -555,10 +548,10 @@ p {
     }
 
     .imti li i {
-        font-size: 1vw;
-        /* padding: 2vw; */
-        width: 1vw;
-        height: 1vw;
+        font-size: 12px;
+        padding: 1.8vw;
+        width: 2vw;
+        height: 2vw;
     }
 
     .cnt1-2,

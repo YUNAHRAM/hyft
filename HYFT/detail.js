@@ -2,6 +2,14 @@
 
 // 마우스 커서 이모티콘 캐릭터로 변경
 const mouseCursor = document.querySelector(".cursor");
+const $btnScrollToImotion = document.querySelectorAll("#btnScrollToImotion")
+const $imotion=document.querySelectorAll("#imotion")
+$btnScrollToImotion.forEach((curs, idx) => {
+    curs.addEventListener('click', (e) => {
+        console.log("이건마우스클릭1")
+        e.target="$imotion"
+    })
+})
 
 window.addEventListener("scroll", getMousePositionScroll);
 window.addEventListener("mousemove", getMousePosition);
@@ -41,19 +49,40 @@ function tabResize() {
         $cursor.classList.remove("cursor");
         
      
-     
-        // 834px 태블릿 사이즈 이하  AOS 애니메이션 삭제
-        // const $div = document.querySelectorAll("div");
-
-        // for (let i = 0; i < $div.length; i++) {
-        //     $div[i].removeAttribute("data-aos");
-        // }
+        const ariaTXT = document.querySelectorAll('.detail_ariaText')
+        const $cover = document.querySelectorAll('.cover')
+        const $parall = document.querySelectorAll('.parall')
+        $cover[0].removeAttribute('class')
+        $parall[0].removeAttribute('class')
+        ariaTXT[0].removeAttribute('class')
+        
+       
     }
     window.onresize = function () {
     document.location.reload();
   };
 }
 tabResize();
+
+// 작은 이미지 클릭시 썸네일 이미지 변경
+   const $cnt1Img = document.querySelector("#cnt1_1img");
+const $mImg = document.querySelectorAll(".mImg")
+const $detail1 = document.querySelector(".detail1_1");
+const $miniImg = document.querySelectorAll(".miniImg")
+    
+   $miniImg.forEach((img, idx) => {
+       img.addEventListener('mouseover', (e) => {
+           
+           $cnt1Img.src=e.target.src
+        })
+   })
+    $miniImg.forEach((img, idx) => {
+       img.addEventListener('mouseout', (e) => { console.log('마우스아웃');
+           $cnt1Img.src="./img/dog1-7.jpg"
+        })
+    })
+
+
  
 
 // fixed 버튼 스크롤 탑으로 이동 
