@@ -149,10 +149,11 @@ h4 {
     height: 24vw;
     justify-self: end;
     align-self: center;
+    transition: 0.3s ease-in-out;
 }
 
 .cnt1_2img {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     width: 12.2vw;

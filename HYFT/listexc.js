@@ -133,7 +133,7 @@ $btnScrollToTop.addEventListener("click", function () {
 //BEST , LIST 이미지 마우스 호버 이미지 변경
 const $bestList = document.querySelector('.bestList');
 const $productList = document.querySelector('.productList');
-const $thumImg = document.createElement("IMG");
+const $thumImg = document.createElement("IMG")
 
 
 // jason 페치
@@ -154,9 +154,33 @@ const $thumImg = document.createElement("IMG");
      })
 
 
-
-function imotionList(imotions) {
+const $newArr = document.querySelector('.newArr');
+function imotionList(imo) {
     console.log('되나용')
+
+
+    // imo.forEach((item, idx) => {
+        const $li = document.createElement('li');
+        console.log(imotionList);
+
+        $li.innerHTML = `
+                <a href="">
+                    <div class="newImg">
+                        <img src="${imotions.nervous.newArr.img_picture}" alt="">
+                    </div>
+                </a>
+                <div class="description">
+                    <div class="animation" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000">
+                        <h2>NEW ARRIVAL</h2>
+                        <span>${item.nervous.newArr.product_feel}</span>
+                    </div>
+                  
+                </div>
+       `
+    console.log(`${item.newArr.img_picture }`)
+            $newArr.appendChild($li);
+// })
 }
 
 function listList(items) {

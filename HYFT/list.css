@@ -300,13 +300,14 @@ p {
     height: 4vw;
 }
 
-.imti li i {
-    font-size: 1.6vw;
+.imti li {
+    /* font-size: 1.6vw; */
     width: 2vw;
     height: 2vw;
 }
 
 .imti>li:first-child {
+
     color: red;
 }
 

@@ -6,7 +6,7 @@ const $btnScrollToImotion = document.querySelectorAll("#btnScrollToImotion")
 const $imotion=document.querySelectorAll("#imotion")
 $btnScrollToImotion.forEach((curs, idx) => {
     curs.addEventListener('click', (e) => {
-        console.log("이건마우스클릭1")
+        // console.log("이건마우스클릭1")
         e.target="$imotion"
     })
 })
@@ -42,38 +42,42 @@ function moveCursor() {
 setInterval('moveCursor()', 30);
 
 // 반응형 리사이즈 사이즈 변경 태블릿 사이즈
-function tabResize() {
-    if (matchMedia("screen and (max-width: 834px)").matches) {
-       //마우스 커서 삭제
-        const $cursor = document.querySelector(".cursor");
-        $cursor.classList.remove("cursor");
+
+window.addEventListener('resize', e => {
+    if(window.innerWidth > 835) {
+      $cursor.classList("cursor");
         
-     
-        const ariaTXT = document.querySelectorAll('.detail_ariaText')
-        const $cover = document.querySelectorAll('.cover')
-        const $parall = document.querySelectorAll('.parall')
-        $cover[0].removeAttribute('class')
-        $parall[0].removeAttribute('class')
-        ariaTXT[0].removeAttribute('class')
         
        
-    }
-    window.onresize = function () {
-    document.location.reload();
-  };
-}
-tabResize();
+    } else if (window.innerWidth < 834) {
+        //마우스 커서 삭제
+        // const $cursor = document.querySelector(".cursor");
+        // $cursor.classList.remove("cursor");
+        
+     
+        //움직이는 텍스트 삭제 
+        const ariaTXT = document.querySelector('.detail_ariaText');
+        const $cover = document.querySelectorAll('.cover');
+        const $parall = document.querySelectorAll('.parall');
+
+        ariaTXT.innerHTML = '';
+        
+    };
+    
+})
 
 // 작은 이미지 클릭시 썸네일 이미지 변경
-   const $cnt1Img = document.querySelector("#cnt1_1img");
+
+const $cnt1Img = document.querySelector("#cnt1_1img");
 const $mImg = document.querySelectorAll(".mImg")
 const $detail1 = document.querySelector(".detail1_1");
 const $miniImg = document.querySelectorAll(".miniImg")
-    
+
    $miniImg.forEach((img, idx) => {
        img.addEventListener('mouseover', (e) => {
            
-           $cnt1Img.src=e.target.src
+           $cnt1Img.src = e.target.src 
+         
         })
    })
     $miniImg.forEach((img, idx) => {
