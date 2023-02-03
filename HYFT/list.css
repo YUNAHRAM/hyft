@@ -136,7 +136,7 @@ p {
 
 .cnt1-2,
 .cnt1-3 {
-    margin: 14vw 12vw;
+    margin: 4vw 12vw;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -145,14 +145,14 @@ p {
 
 
 .cnt1-1 {
-    margin: 5vw 10vw;
+    margin: 5vw 14vw;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    justify-self: center;
+
 }
 
 .feelList>a {
-    font-size: 4vw;
+    font-size: 3vw;
     color: #E9DDD4;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 900;
@@ -168,39 +168,39 @@ p {
 
 .newArr {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    left: 4vw;
+
 }
 
 .newArr>a {
     background: url(./img/cat1-5.jpg) no-repeat;
     position: absolute;
     background-size: contain;
-    justify-self: start;
     align-self: center;
-    width: 26vw;
-    height: 26vw;
+    width: 20vw;
+    height: 20vw;
     overflow: hidden;
+    transition: 0.3s ease-in-out;
 }
 
 .newArr>a:hover {
     background: url(./img/hovers/hover-new.png);
-    position: absolute;
-    justify-self: start;
+    /* position: absolute; */
     align-self: center;
     background-size: contain;
-    background-position: center;
-    width: 26vw;
-    height: 26vw;
+    width: 20vw;
+    height: 20vw;
     overflow: hidden;
     transition: 0.3s ease-in-out;
 }
 
 .newArr>.description>div {
-    left: 29vw;
+    left: 22vw;
     top: 4vw;
     position: absolute;
-    text-align: left;
+    text-align: start;
     justify-self: start;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -209,7 +209,7 @@ p {
     padding: 1vw;
 }
 
-.newArr>div>button {
+/* .newArr>div>button {
     left: 31vw;
     top: 22vw;
     position: absolute;
@@ -220,7 +220,7 @@ p {
     width: 18vw;
     font-size: 1vw;
     font-family: 'Pretendard-Regular';
-}
+} */
 
 
 .bestList li {
@@ -291,6 +291,7 @@ p {
 }
 
 .imti li i {
+    font-size: 1.6vw;
     width: 2vw;
     height: 2vw;
 }
@@ -368,7 +369,7 @@ p {
 
     .cnt1-2,
     .cnt1-3 {
-        margin: 6vw 10vw;
+        margin: 2vw 10vw;
     }
 
     .cnt1-1 {
@@ -388,7 +389,7 @@ p {
         padding: 0;
         display: flex;
         flex-direction: row;
-        background-color: #E9DDD4;
+        background-color: #e9ddd486;
         position: absolute;
     }
 
@@ -408,7 +409,7 @@ p {
         justify-content: center;
         width: 100%;
         height: 30vw;
-        left: 20vw;
+        left: 23vw;
         top: 10vw;
     }
 
@@ -445,9 +446,29 @@ p {
         display: none;
     }
 
-    .thumbnail {
-        margin: 2vw 0;
+    .bestList .imti {
+
+        width: 22vw;
+        height: 2vw;
+
     }
+
+    .productList .imti {
+
+        width: 22vw;
+        height: 2vw;
+    }
+
+    .imti li i {
+
+        padding: 1.4vw;
+        width: 1vw;
+        height: 1vw;
+    }
+
+    /* .thumbnail {
+        margin: 2vw 0;
+    } */
 
     .thumbnail>img {
         margin: 0;
@@ -479,6 +500,16 @@ p {
 
 /* 모바일 사이즈 */
 @media screen and (max-width: 414px) {
+    span {
+        font-size: 8px;
+    }
+
+    .imti li i {
+        font-size: 1vw;
+        /* padding: 2vw; */
+        width: 1vw;
+        height: 1vw;
+    }
 
     .cnt1-2,
     .cnt1-3 {
@@ -495,68 +526,88 @@ p {
 
     .cnt1-1 {
         margin: 0;
+        justify-content: center;
     }
+
+    .newArr>a {
+
+        width: 24vw;
+        height: 24vw;
+    }
+
+    .newArr>a:hover {
+
+        width: 24vw;
+        height: 24vw;
+
+    }
+
 
     .newArr>.description>div {
-        height: 12vw;
-        padding: 3vw;
+        top: 2vw;
+        height: 18vw;
+        line-height: 1vw;
     }
 
 
+
+    /* .newArr>.description>div {
+        text-align: center;
+        justify-self: start;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 30%;
+        height: 14vw;
+        padding: 1vw;
+        line-height: 1vw;
+    } */
 
     .newArr>.description h2 {
         text-align: center;
-        justify-self: center;
         align-items: center;
+        line-height: 4vw;
+
     }
 
     .newArr>.description>div span {
-        display: none;
+        line-height: 3vw;
     }
 
-    .newArr>div>button {
-        left: 32vw;
-        top: 20vw;
-        border-radius: 4vw;
-        padding: 1vw 6vw;
-        width: 24vw;
-        font-size: 0.4vw;
-        font-family: 'Pretendard-Regular';
 
-    }
 
-    .bestList {
-        border-top: 1px solid black;
+    /* .bestList {
+        border-top: 1px solid #c2b1a5;
         justify-content: space-evenly;
+        display: flex;
+        grid-template-columns: repeat(2, 1fr); 
+}*/
+
+    /* .productList {
+        border-top: 1px solid #c2b1a5;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 
-    .productList {
-        border-top: 1px solid black;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .bestList>li:nth-child(3) {
+    /* .bestList>li:nth-child(3) {
         display: none;
-    }
+    } */
 
-    .thumbnail>img {
+    /* .thumbnail>img {
         width: 36vw;
         height: 36vw;
         overflow: hidden;
         justify-self: center;
         align-self: center;
         margin: 1vw 0;
-    }
-
+    } */
+    /* 
     .productList>li:nth-child(3),
     :nth-child(7) {
         display: none;
-    }
+    } */
 
-    .thumbnail {
+    /* .thumbnail {
         margin: 2vw -4vw;
-    }
+    } */
+
 }
