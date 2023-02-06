@@ -113,14 +113,14 @@
         </div>
     </div>
     <!-- 디테일 컨테이너 -->
-    <div class=" detailList1">
+                            <div class=" detailList1">
                             <ul>
                                 <li></li>
                                 <a href="#detailList1">
                                     <li id="detailPage">DETAIL</li>
                                 </a>
                                 <a href="#d_review"">
-                                    <li id=" reviewPage">REVIEW</li>
+                <li id=" reviewPage">REVIEW</li>
                                 </a>
                                 <a href="#d_community">
                                     <li id="communityPage">COMMUNITY</li>
@@ -269,9 +269,9 @@
                                     < 패키지 안내>
                                         <br><br>
                                 </p>
-                                <img class="animation" data-aos="fade-up" data-aos-offset="100" data-aos-mirror="true"
+                                <img class="animation" data-aos="fade-up" data-aos-offset="50" data-aos-mirror="true"
                                     data-aos-once="false" data-aos-anchor-placement="center-bottom"
-                                    data-aos-easing="ease-out-cubic" data-aos-duration="1000" src="
+                                    data-aos-easing="ease-out-cubic" data-aos-duration="600" src="
                     ./img/bear1-9.jpg" alt="box size image">
                                 <div class="animation" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
                                     data-aos-easing="ease-out-cubic" data-aos-duration="1600">
@@ -299,7 +299,7 @@
                         <div class="d_box1">
                             <input type="text" placeholder="리뷰를 남겨보세요"> <button>저장하기</button>
                         </div>
-                        <div class="d_box2" id="d_community">
+                        <div class="d_box2">
                             <div>
                                 <div>
                                     <p>윤아*</p>
@@ -341,7 +341,7 @@
                             </div>
                             <div>
                                 <div>
-                                    <p>최상*</p>
+                                    <p id="d_community">최상*</p>
                                     <p></p>
                                 </div>
                                 <div><span>GOOD~!</span>
@@ -359,22 +359,45 @@
                         <h2>COMMUNITY</h2>
                         <div>
                             <li></li>
-                            <div class="dco_box1">
-                                <img src="./tape.svg" alt="">
-                                <div>
-                                    <p>제목</p><i>이모티콘</i><br><span>내용내용내용내용</span>
+                            <div class="card">
+                                <img class="tape" src="./tape.svg" alt="" />
+                                <div class="box">
+                                    <div class="titleBox">
+                                        <div class="title">넘 우울해여</div>
+                                        <img class="cardEmoji" src="img/svg/LONELY.svg" alt="" />
+                                    </div>
+                                    <div class="contentBox">
+                                        <p>
+                                            오늘 난 좀 우울하다.<br>
+                                            회사에서 너무 짜증나는 일이 있었다.<br> 무슨 일이냐면...<br>
+                                            <더보기>
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="dco_box2">
-                                <img src="./tape.svg" alt="">
-                                <div>
-                                    <p>제목</p><i>이모티콘</i><br><span>내용내용내용내용</span>
+                            <div class="card">
+                                <img class="tape" src="./tape.svg" alt="" />
+                                <div class="box">
+                                    <div class="titleBox">
+                                        <div class="title">오늘 일기</div>
+                                        <img class="cardEmoji" src="img/svg/NERVOUS.svg" alt="" />
+                                    </div>
+                                    <div class="contentBox">
+                                        <p>
+                                            그냥 그런 기분인 일기.<br>
+                                            감정을 선택 하라길래 이게 뭔가 하고.<br> 처음엔 좀 당황했지만 일기 처럼 적어봐요...<더보기>
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="dco_box3">
-                                <img src="./tape.svg" alt="">
-                                <div>
-                                    <i>이모티콘</i><button>더보기</button>
+                            <div class="card">
+                                <img class="tape" src="./tape.svg" alt="" />
+                                <div class="plusbox ">
+                                    <a href="#" class="plus">
+
+                                    </a>
                                 </div>
                             </div>
                             <li></li>

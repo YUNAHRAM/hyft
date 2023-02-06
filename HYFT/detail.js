@@ -51,8 +51,8 @@ window.addEventListener('resize', e => {
        
     } else if (window.innerWidth < 834) {
         //마우스 커서 삭제
-        // const $cursor = document.querySelector(".cursor");
-        // $cursor.classList.remove("cursor");
+        const $cursor = document.querySelector(".cursor");
+        $cursor.classList.remove("cursor");
         
      
         //움직이는 텍스트 삭제 

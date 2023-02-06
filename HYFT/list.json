@@ -1,7 +1,7 @@
 [
     {
         "img_picture": "./img/list1.jpg",
-        "img_overEffect": "./img/hovers/hover-list1.png",
+        "img_overEffect": "./img/hovers/hover-4.png",
         "product_number": "circus boy band_023",
         "product_name": "Holloween cat Boy",
         "price": "25,000",
@@ -9,7 +9,7 @@
     },
     {
         "img_picture": "./img/list2.gif",
-        "img_overEffect": "./img/hover/hover-list2.png",
+        "img_overEffect": "./img/hovers/hover-2.png",
         "product_number": "plant makes me comfotable_02",
         "product_name": "My room Family",
         "price": "20,000",
@@ -17,7 +17,7 @@
     },
     {
         "img_picture": "./img/list3.jpg",
-        "img_overEffect": "./img/hover/hover-list3.png",
+        "img_overEffect": "./img/hovers/hover-list3.png",
         "product_number": "Made by ME_no.03",
         "product_feel": "lonley",
         "product_name": "hand made by Me",
@@ -26,7 +26,7 @@
     },
     {
         "img_picture": "./img/list4.jpg",
-        "img_overEffect": "./img/hover/hover-list4.png",
+        "img_overEffect": "./img/hovers/hover-new.png",
         "product_number": "circus boy band_002",
         "product_feel": "lonley",
         "product_name": "Random Hug Figure",
@@ -35,7 +35,7 @@
     },
     {
         "img_picture": "./img/list5.jpg",
-        "img_overEffect": "./img/hover/hover-list5.png",
+        "img_overEffect": "./img/hovers/hover-8.png",
         "product_number": "circus boy band_006",
         "product_feel": "lonley",
         "product_name": "Cbb Penguin cup",
@@ -44,7 +44,7 @@
     },
     {
         "img_picture": "./img/list6.jpg",
-        "img_overEffect": "./img/hover/hover-list6.png",
+        "img_overEffect": "./img/hovers/hover-7.png",
         "product_number": "circus boy band_019",
         "product_feel": "lonley",
         "product_name": "Cbb Hug Figure",
@@ -62,7 +62,7 @@
     },
     {
         "img_picture": "./img/list8.jpg",
-        "img_overEffect": "./img/hover/d1-1.jpg",
+        "img_overEffect": "./img/hover/hover-13.png",
         "product_number": "circus boy band_042",
         "product_feel": "lonley",
         "product_name": "Random Duck Figure",
