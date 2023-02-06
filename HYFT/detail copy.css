@@ -65,7 +65,8 @@ html,
 body {
   scroll-behavior: smooth;
   width: 100%;
-  height: 900vh;
+  height: 990vh;
+  /* overflow-x: hidden; */
 }
 
 header {
@@ -103,11 +104,15 @@ h4 {
   transition: all 3s;
 }
 
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .detailCnt1_1 {
   width: 100%;
-  height: 40vw;
-  /* position: relative; */
-  margin-top: 10vw;
+  height: 35.5vw;
+  padding-top: 11vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
@@ -115,15 +120,28 @@ h4 {
   gap: 0.6vw;
 }
 
+.detailCnt1_1 + div {
+  display: flex;
+  justify-content: center;
+}
+
 /* 상단 썸네일 */
 .detail1_1 {
   justify-self: end;
+  /* margin-bottom: 10vw; */
 }
 
 .miniImg {
   display: flex;
-  /* grid-template-columns: repeat(4, 1fr); */
   justify-content: center;
+  align-self: center;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* width: 24vw; */
+  width: 24vw;
+  height: 6vw;
+}
+
+.miniImg + div {
   width: 24vw;
   height: 6vw;
 }
@@ -141,9 +159,9 @@ h4 {
   height: 24vw;
   justify-self: end;
   align-self: center;
-  transition: 0.3s ease-in-out;
+  /* transition: 0.3s ease-in-out; */
 }
-
+/* 
 .cnt1_2img {
   position: sticky;
   top: 0;
@@ -152,14 +170,14 @@ h4 {
   height: 12.2vw;
   border: none;
   z-index: 100;
-}
+} */
 
 .imgBox1 {
   position: absolute;
   background-color: white;
   width: 3vw;
-  height: 4vw;
   top: 0vw;
+  height: 4vw;
   left: 45vw;
   border-bottom-left-radius: 4vw;
   border-bottom-right-radius: 4vw;
@@ -167,13 +185,20 @@ h4 {
 
 /* 상단 가격 박스 */
 .detail1_2 {
-  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
   justify-self: start;
 }
 
 .box1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 10px;
+
   background-color: #cacaca4d;
   height: 8vw;
   width: 24vw;
@@ -183,10 +208,6 @@ h4 {
 .box1 > div {
   text-align: end;
   margin-right: 0.5vw;
-}
-
-.box1_text {
-  margin: 0.5vw;
 }
 
 .box2 {
@@ -293,7 +314,7 @@ h4 {
   z-index: 100;
   position: sticky;
   top: 0;
-  height: 6.2vw;
+  height: 6.15vw;
   background-color: white;
 }
 
@@ -305,7 +326,7 @@ h4 {
   text-align: center;
   justify-content: space-evenly;
   padding: 2vw;
-  border-bottom: 0.1vw solid black;
+  border-bottom: 0.8px solid black;
   border-top: 0.1vw solid black;
 }
 
@@ -318,12 +339,20 @@ h4 {
   font-weight: bold;
   font-size: 1.6vw;
 }
+.detailList1 ul a li:hover {
+  /* font-size: 1.7vw; */
+  border-bottom: 0.2vw solid #9b9b9b;
+  /* border-radius: 30px; */
+  /* box-shadow: 2px 2px 5px 5px #c9c7bb69; */
+  transition: 0.2s ease-in-out;
+}
 
 .detailCnt1_2 {
   background-color: rgba(0, 0, 0, 21%);
   height: 86vw;
   width: 100%;
   z-index: 90;
+
   display: inline-block;
 }
 
@@ -351,9 +380,10 @@ h4 {
 
 #d_img_1 div:nth-child(2) {
   position: absolute;
-  top: 68vw;
+  top: 58vw;
   left: 0;
   width: 100%;
+  height: 30vw;
   z-index: 50;
   text-align: center;
   justify-content: center;
@@ -600,20 +630,98 @@ input {
   justify-content: center;
 }
 
-/* .d_community>div>div {
-    width: 16vw;
-    height: 18vw;
-    background: #faf4f444;
-    justify-self: center;
-    box-shadow: 5px 5px 5px 5px #D9D9D9;
-} */
-
 .d_community h2 {
   margin: 6vw 18vw;
   font-size: 1.5vw;
   color: #231f20;
 }
+/* community css */
+.card {
+  display: flex;
+  justify-content: center;
+  width: 18vw;
+  height: 20vw;
+  cursor: pointer;
+}
 
+.tape {
+  position: absolute;
+  width: 118px;
+  height: 32px;
+  margin-top: -16px;
+  z-index: 2;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 60px 20px 20px;
+}
+.plusbox {
+  align-items: center;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px 20px;
+}
+.plus {
+  margin-top: 2vw;
+  width: 90%;
+  height: 90%;
+  background: url('./img/add.png') no-repeat;
+  background-size: contain;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+.titleBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.title {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 17px;
+}
+
+.cardEmoji {
+  width: 30px;
+  height: 30px;
+}
+
+.contentBox {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 25px;
+  height: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+.contentBox p {
+  font-size: 0.9vw;
+}
 /* Top 탑 버튼 & 감정 버튼 imoticon 픽스드 */
 #btnScrollToTop {
   z-index: 150;
@@ -674,101 +782,19 @@ input {
   background: #756e6f;
 }
 
-/* community css */
-.card {
-  display: flex;
-  justify-content: center;
-  width: 18vw;
-  height: 20vw;
-  cursor: pointer;
-}
-
-.tape {
-  position: absolute;
-  width: 118px;
-  height: 32px;
-  margin-top: -16px;
-  z-index: 2;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
-  padding: 60px 20px 20px;
-}
-.plusbox {
-  align-items: center;
-  display: flex;
-  justify-self: center;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
-  padding: 20px 20px;
-}
-.plus {
-  margin-top: 2vw;
-  width: 90%;
-  height: 90%;
-  background: url('./img/add.png') no-repeat;
-  background-size: contain;
-  justify-content: center;
-  justify-self: center;
-  align-items: center;
-}
-.titleBox {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-}
-
-.title {
-  font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 17px;
-}
-
-.cardEmoji {
-  width: 30px;
-  height: 30px;
-}
-
-.contentBox {
-  margin-top: 15px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 25px;
-  height: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-}
-
 /* 태블릿 사이즈 */
 
 @media screen and (max-width: 834px) {
   .detailCnt1_1 {
-    margin: 4vw 0vw;
+    height: 46vw;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
   }
-
+  .detail1_1 {
+    margin-bottom: 0vw;
+  }
   .cnt1_1img {
     position: relative;
     width: 38vw;
@@ -793,18 +819,26 @@ input {
   }
 
   .box1 {
-    display: flex;
+    /* display: flex;
     flex-wrap: nowrap;
     background: none;
     position: absolute;
     top: 35vw;
     left: 50vw;
     font-size: 70%;
-    width: 17vw;
+    width: 17vw; */
+    height: 8vw;
+    width: 38vw;
   }
 
   .box1_text {
     margin-top: 14vw;
+  }
+  .detailList1 {
+    margin-top: 12vw;
+  }
+  .detailList1 > ul {
+    margin-top: 24vw;
   }
 
   .box1_text > span {
@@ -844,7 +878,7 @@ input {
   }
 
   #d_img_1 div:nth-child(2) {
-    top: 80vw;
+    top: 102vw;
   }
 
   .detail_aria2 {
@@ -861,7 +895,6 @@ input {
 
   .detail_aria4 {
     display: flex;
-
     justify-content: center;
     align-items: center;
     margin-top: 4vw;
@@ -910,23 +943,62 @@ input {
     margin-left: 12vw;
   }
 
-  .detailList1 > ul {
-    margin: -14vw;
-  }
-
-  #d_img_1 div:nth-child(2) {
-    margin-top: 4vw;
-  }
-
   .d_box1 > button,
   input {
     padding: 0.6vw 2vw;
   }
+  .d_community > div {
+    display: flex;
+  }
+  .tape {
+    width: 80px;
+    z-index: 2;
+  }
+  .card:nth-child(2) {
+    display: none;
+  }
+  .detail_ariaText,
+  .cover:nth-child(1) {
+    display: none;
+  }
+  .box {
+    box-shadow: 1.2vw 1.2vw 2.4vw rgb(0 0 0 / 15%);
+    padding: 7.19vw 2.4vw 2.4vw;
+  }
 }
 
+@media (max-width: 750px) {
+  .box {
+    padding: 8vw 2.67vw 2.67vw;
+  }
+}
+@media (max-width: 680px) {
+  .box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 34px 20px 20px;
+    justify-content: center;
+  }
+}
 /* 모바일 사이즈 */
-
+@media (max-width: 499px) {
+  .box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 6.81vw 4.01vw 4.01vw;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 414px) {
+  .detailCnt1_1 {
+    height: 106vw;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
   .cnt1_1img {
     margin-top: 14vw;
     position: relative;
@@ -938,10 +1010,6 @@ input {
     display: none;
   }
 
-  .imgBox1 {
-    display: none;
-  }
-
   .miniImg {
     display: none;
   }
@@ -950,39 +1018,78 @@ input {
     width: 68vw;
     height: 34vw;
   }
+  .detailList1 {
+    height: 8.15vw;
+    margin-top: 38vw;
+  }
 
   .box1 {
-    display: flex;
-    background: none;
-    position: absolute;
-    top: 28vw;
-    left: 50vw;
+    height: 14vw;
+    width: 68vw;
+    line-height: 4vw;
   }
 
   .box2,
   .box3 {
+    height: 20vw;
     width: 68vw;
+    line-height: 4vw;
+  }
+  .box2_box {
+    padding: 2.6vw;
+    line-height: 4vw;
+  }
+  .box3_box {
+    width: 66vw;
+    line-height: 6vw;
+  }
+
+  .box3_box > h3 {
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .box3_box > h2 {
+    font-size: 14px;
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .btnB {
+    height: 7.8vw;
+    width: 28vw;
+    margin: 2vw 0.8vw;
+    font-size: 0.6vw;
+    align-self: center;
+    justify-self: center;
   }
 
   #d_img_1 div:nth-child(2) {
-    top: 80vw;
+    top: 180vw;
   }
 
   .detail_aria2 {
     margin-top: 12vw;
+    height: 170vw;
   }
 
   .detail_aria2 div img {
     width: 38vw;
     height: 38vw;
   }
-
+  .detail2_text {
+    line-height: 6vw;
+    margin: 4vw;
+    font-size: 0.9vw;
+    font-weight: lighter;
+  }
   .detail_aria3 {
     margin-top: 6vw;
   }
-
+  .detail_ariaText,
   .cover:nth-child(1) {
-    margin-top: 40vh;
+    display: none;
   }
 
   .detail_aria3 > div:first-child {
@@ -1001,4 +1108,12 @@ input {
     padding: 0.4vw 1vw;
     font-size: 0.2vw;
   }
+  /* .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 48vw;
+    height: 30vw;
+    cursor: pointer;
+  } */
 }

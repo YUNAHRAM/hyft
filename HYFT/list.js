@@ -14,8 +14,8 @@ function getMousePositionScroll() {
 }
 
 function getMousePosition(e) {
-  mouseX = e.clientX + 30;
-  mouseClientY = e.clientY;
+  mouseX = e.clientX + 50;
+  mouseClientY = e.clientY + 50;
   mousePageY = e.pageY;
 
   getMousePositionScroll();
@@ -36,21 +36,9 @@ setInterval('moveCursor()', 30);
 //토글 만들기
 const $iClk = document.querySelectorAll('.clickE');
 
-// $iClk.forEach((imot,idx)=> {
-
-//     $btnScrollToImotion.forEach((imo, idx) => {
-//         imo.addEventListener("click", function () {
-//             console.log('감정배열')
-//             click.classList.toggle("selected");
-//             mouseCursor.src = imo.target.src
-//         });
-//     });
-
-// });
 const $btnScrollToImotion = document.querySelectorAll('.im');
 
 const imgs = btnScrollToImotion.querySelectorAll('.btnScrollToImotion>img');
-// console.log($btnScrollToImotion)
 
 const $cursor1 = document.getElementById('cursor');
 console.log($cursor1);
@@ -58,10 +46,8 @@ console.log($cursor1);
 $btnScrollToImotion.forEach((img, idx) => {
   console.log(img.src);
   img.addEventListener('click', e => {
-    // console.log(e.target.src)
     $cursor1.style.backgroundImage = `url(${e.target.src})`;
-
-    // getComputedStyle(mouseCursor).backgroundImage=
+    // img.src.classList.toggle('selected');
   });
 });
 
@@ -137,72 +123,28 @@ function imotionList(imotions) {
   console.log('되나용');
 }
 
-function listList(items) {
-  items.forEach((item, idx) => {
-    const $li = document.createElement('li');
-
-    $li.innerHTML = `
-      <a href="./detailEnd.html">
-          <div class="list_img">
-              <img src="${item.img_picture}" alt="" class="ff">
-          </div>
-          <div class="list_text">
-                <ul class="imti">
-                    <li class="heartBtn"><i class="fi fi-rr-heart"></i></li>
-                    <li><i class="fi fi-rr-shopping-cart"></i></li>
-                </ul>
-              <span>${item.product_number}</span>
-              <h4>${item.product_name}</h4>
-              <h4>${item.price}</h4>
-          </div>
-      </a>`;
-    $productList.appendChild($li);
-  });
-
-  // hoverEvent(items);
-  const $ff = document.querySelectorAll('.ff');
-  $ff.forEach((item, idx) => {
-    item.addEventListener('mouseover', () => {
-      console.log('list');
-      item.src = `${items[idx].img_overEffect}`;
-    });
-    item.addEventListener('mouseout', () => {
-      item.src = `${items[idx].img_picture}`;
-    });
-  });
-  //heart 좋아요 버튼 클릭 토글 이벤트 하트 버튼 색깔
-  const $heartBtn = document.querySelectorAll('.heartBtn');
-  const $heart = document.querySelectorAll('.heartBtn i');
-  const $buyBtn = document.querySelector('.buyBtn');
-  console.log($heartBtn);
-  $heartBtn.forEach(icon => {
-    icon.addEventListener('click', icon => {
-      icon.target.classList.toggle('fi-rr-heart');
-      icon.target.classList.toggle('fi-ss-heart');
-    });
-  });
-}
-
+// BEST LIST
 function makeList(items) {
   items.forEach((item, idx) => {
     const $li = document.createElement('li');
-
     $li.innerHTML = `
-        <a href="./detailEnd.html">
-          <div class="best_img">
-              <img src="${item.img_picture}" alt="" class="ww">
-          </div>
-          <div class="best_text">
-                <ul class="imti">
-                    <li class="heartBtn flipped"><i class="fi fi-rr-heart"></i></li>
-                    <li class="buyBtn"><i class="fi fi-rr-shopping-cart"></i></li>
-                </ul>
-              <span>${item.product_number}</span>
-              <h4>${item.product_name}</h4>
-              <h4>${item.price}</h4>
-          </div>
-      </a>`;
-
+        <div>
+                <div class="best_img">
+                    <img src="${item.img_picture}" alt=""  transition: all 0.2s; class="ww" >
+                </div>
+            
+           
+            <div class="best_text">
+                    <ul class="imti">
+                        <li class="heartBtn"><i class="fi fi-rr-heart"></i></li>
+                        <li class="buyBtn"><i class="fi fi-rr-shopping-cart"></i></li>
+                    </ul>
+                <span>${item.product_number}</span>
+                <h4>${item.product_name}</h4>
+                <h4>${item.price}</h4>
+            </div>
+        </div>
+      `;
     $bestList.appendChild($li);
   });
   // hoverEvent(items);
@@ -215,16 +157,50 @@ function makeList(items) {
       item.src = `${items[idx].img_picture}`;
     });
   });
+}
 
+// LIST LIST
+function listList(items) {
+  items.forEach((item, idx) => {
+    const $li = document.createElement('li');
+
+    $li.innerHTML = `
+      <div>
+          <div class="list_img">
+              <img src="${item.img_picture}" alt="" class="ff">
+          </div>
+          <div class="list_text">
+                <ul class="imti">
+                    <li class="heartBtn"><i class="fi fi-rr-heart"></i></li>
+                    <li><i class="fi fi-rr-shopping-cart"></i></li>
+                </ul>
+              <span>${item.product_number}</span>
+              <h4>${item.product_name}</h4>
+              <h4>${item.price}</h4>
+          </div>
+      </div>`;
+    $productList.appendChild($li);
+  });
+
+  // hoverEvent(items);
+  const $ff = document.querySelectorAll('.ff');
+  $ff.forEach((item, idx) => {
+    item.addEventListener('mouseover', () => {
+      item.src = `${items[idx].img_overEffect}`;
+    });
+    item.addEventListener('mouseout', () => {
+      item.src = `${items[idx].img_picture}`;
+    });
+  });
   //heart 좋아요 버튼 클릭 토글 이벤트 하트 버튼 색깔
   const $heartBtn = document.querySelectorAll('.heartBtn');
   const $heart = document.querySelectorAll('.heartBtn i');
   const $buyBtn = document.querySelector('.buyBtn');
-  console.log($heartBtn);
+
   $heartBtn.forEach(icon => {
-    icon.addEventListener('click', icon => {
-      icon.target.classList.toggle('fi-rr-heart');
-      icon.target.classList.toggle('fi-ss-heart');
+    icon.addEventListener('click', ico => {
+      ico.target.classList.toggle('fi-rr-heart');
+      ico.target.classList.toggle('fi-ss-heart');
     });
   });
 }
@@ -315,13 +291,13 @@ function makeList(items) {
 //       <a href="">
 //           <div class="best_img">
 //               <img src="${item.img_picture}" alt="">
-//           </div>
+//           </div></a>
 //           <div class="best_text">
 //               <p>${item.product_number}</p>
 //               <span>${item.product_name}</span>
 //               <p>${item.price}</p>
 //           </div>
-//       </a>`;
+//       `;
 //     $thumbnail.appendChild(div);
 // }
 
