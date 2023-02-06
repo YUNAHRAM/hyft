@@ -163,7 +163,11 @@ p {
   font-weight: 900;
   font-style: italic;
 }
-
+.feelList li:hover {
+  color: black;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
 .selected {
   color: #000;
 }
@@ -190,7 +194,6 @@ p {
 
 .newArr > a:hover {
   background: url(./img/hovers/hover-new.png);
-  /* position: absolute; */
   align-self: center;
   background-size: contain;
   width: 20vw;
