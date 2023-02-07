@@ -63,10 +63,10 @@ button {
 
 html,
 body {
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
   width: 100%;
   height: 0 auto;
-  /* overflow-x: hidden; */
 }
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @font-face {
@@ -702,12 +702,18 @@ h4 {
 .btncart {
   background-color: #9b9b9b;
 }
-
+.btncart:hover {
+  background-color: #807e7eda;
+  color: white;
+}
 .btnbuy {
   background-color: #231f20;
   color: white;
 }
-
+.btnbuy:hover {
+  background-color: #6b6b6b;
+  color: #f6f3ee;
+}
 /* 디테일 컨테이너 */
 .detailList1 {
   width: 100%;
@@ -1249,6 +1255,9 @@ input {
 /* 태블릿 사이즈 */
 
 @media screen and (max-width: 834px) {
+  .cursor {
+    display: none;
+  }
   .detailCnt1_1 {
     height: 46vw;
     display: flex;
@@ -1428,7 +1437,23 @@ input {
   }
   .box {
     box-shadow: 1.2vw 1.2vw 2.4vw rgb(0 0 0 / 15%);
-    padding: 7.19vw 2.4vw 2.4vw;
+    padding: 2.19vw 2.4vw 2.4vw;
+  }
+  .card {
+    position: relative;
+    width: 28vw;
+    height: 20vw;
+    cursor: pointer;
+    justify-content: space-between;
+  }
+
+  .plus {
+    /* margin-top: 2vw; */
+    width: 100%;
+    height: 100%;
+    background: url('./img/add.png') no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 }
 
@@ -1443,7 +1468,7 @@ input {
     top: 112vw;
   }
   .box {
-    padding: 8vw 2.67vw 2.67vw;
+    padding: 2vw 2.67vw 2.67vw;
   }
 }
 @media (max-width: 680px) {
@@ -1462,12 +1487,11 @@ input {
   #d_img_1 div:nth-child(2) {
     top: 116vw;
   }
-  .box {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    padding: 34px 20px 20px;
-    justify-content: center;
+
+  .card {
+    width: 28vw;
+    height: 20vw;
+    cursor: pointer;
   }
 }
 /* 모바일 사이즈 */
@@ -1477,18 +1501,17 @@ input {
     margin-top: 33vw;
   }
 
-  .box {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    padding: 6.81vw 4.01vw 4.01vw;
-    justify-content: center;
-  }
   #d_img_1 div:nth-child(2) {
     top: 126vw;
   }
 }
 @media screen and (max-width: 414px) {
+  /* #btnScrollToImotion #imotion {
+    display: none;
+  } */
+  #btnScroll > div:first-child {
+    display: none;
+  }
   .detailCnt1_1 {
     height: 106vw;
     display: flex;
@@ -1605,14 +1628,6 @@ input {
     padding: 0.4vw 1vw;
     font-size: 0.2vw;
   }
-  /* .card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 48vw;
-    height: 30vw;
-    cursor: pointer;
-  } */
 }
 /* 푸터시작 */
 footer {

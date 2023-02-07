@@ -177,7 +177,7 @@ function makeList(items) {
     $li.innerHTML = `
         <div>
                 <div class="best_img">
-                    <img src="${item.img_picture}" alt=""  transition: all 0.2s; class="ww" >
+                    <img src="${item.img_picture}" alt=""  transition: all 0.2s; class="ww" cover ;>
                 </div>
             
            
@@ -214,7 +214,7 @@ function listList(items) {
     $li.innerHTML = `
       <div>
           <div class="list_img">
-              <img src="${item.img_picture}" alt="" class="ff">
+              <img src="${item.img_picture}" alt="" class="ff" cover;>
           </div>
           <div class="list_text">
                 <ul class="imti">
