@@ -20,7 +20,7 @@ button {
 .cursor {
   width: 3rem;
   height: 3rem;
-  background: url('./img/SVG/LONELY.svg');
+  background: url('./SVG/LONELY.svg');
   position: absolute;
   z-index: 1000;
   transform: translate(-50%, -50%);
@@ -65,13 +65,420 @@ html,
 body {
   scroll-behavior: smooth;
   width: 100%;
-  height: 990vh;
+  height: 0 auto;
   /* overflow-x: hidden; */
 }
-
-header {
-  height: 120px;
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular';
+}
+
+/* 헤더 */
+body .hidden {
+  display: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.header-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  width: 100%;
+  height: 20px;
+  background-color: white;
+}
+.header-up .fa-xmark {
+  position: absolute;
+  right: 2%;
+}
+.header-container {
+  background-color: #f6f3ee;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+.header-container .header-left {
+  position: absolute;
+  left: 3%;
+  font-size: 20px;
+}
+.header-container p {
+  font-family: 'Homemade Apple';
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container .header-right {
+  position: absolute;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.header-container .header-right a {
+  margin-left: 30px;
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 414px) {
+  .fa-cart-shopping {
+    display: none;
+  }
+}
+@media (max-width: 836px) {
+  .header-up {
+    display: none;
+  }
+}
+/* 헤더끝 */
+
+/* 햄버거 메뉴 시작 */
+.menu-on {
+  animation-name: slideIn;
+  animation-duration: 1.5s;
+}
+@keyframes slideIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.menu-off {
+  animation-name: slideOut;
+  animation-duration: 1.5s;
+}
+@keyframes slideOut {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@media (max-width: 836px) {
+  .bar-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f1ee;
+    position: fixed;
+    top: 100px;
+    z-index: 100;
+  }
+  .bar-right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 30px;
+    margin-left: 10%;
+  }
+  .bar-right a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Cormorant SC';
+    font-size: 46px;
+  }
+  .bar-right input {
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin-top: 50px;
+    width: 70%;
+    padding: 5px;
+    padding-left: 40px;
+    font-size: 20px;
+    background-color: transparent;
+  }
+  .bar-right input::placeholder {
+    color: black;
+    font-family: 'Cormorant SC';
+    font-size: 24px;
+    text-align: center;
+  }
+  .bar-right div {
+    position: relative;
+  }
+  .bar-right div i {
+    position: absolute;
+    bottom: 5px;
+    font-size: 20px;
+  }
+  .bar-left {
+    position: absolute;
+    top: 450px;
+    right: 10%;
+    width: 100%;
+    height: 80vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bar-left .bar-img {
+    background-color: white;
+    width: 70%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 837px) {
+  .bar-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f1ee;
+    padding-top: 50px;
+    display: flex;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    z-index: 100;
+  }
+  .bar-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bar-left .bar-img {
+    background-color: white;
+    width: 400px;
+    height: 520px;
+    margin-top: 80px;
+    margin-right: 10%;
+  }
+  .bar-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 5%;
+  }
+  .bar-right a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Cormorant SC';
+    font-size: 60px;
+  }
+  .bar-right input {
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin-top: 110px;
+    width: 100%;
+    padding: 5px;
+    padding-left: 40px;
+    font-size: 20px;
+    background-color: transparent;
+  }
+  .bar-right input::placeholder {
+    color: black;
+    font-family: 'Cormorant SC';
+    font-size: 30px;
+    text-align: center;
+  }
+  .bar-right div {
+    position: relative;
+  }
+  .bar-right div i {
+    position: absolute;
+    bottom: 5px;
+    font-size: 25px;
+  }
+}
+/* 햄버거 메뉴 끝 */
+
+/* 장바구니메뉴 시작 */
+.cart-on {
+  animation-name: cartIn;
+  animation-duration: 1.5s;
+}
+@keyframes cartIn {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.cart-off {
+  animation-name: cartOut;
+  animation-duration: 1.5s;
+}
+@keyframes cartOut {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
+@media (max-width: 836px) {
+  .cart-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f1ee;
+    position: fixed;
+    display: flex;
+    padding: 50px 100px 0 50px;
+    z-index: 100;
+  }
+  .cart-left {
+    display: none;
+  }
+  .cart-right {
+    padding-left: 50px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cart-right-title {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid #c9c7bb;
+    padding-bottom: 10px;
+    font-family: 'Cormorant SC';
+    font-weight: bold;
+    position: relative;
+  }
+  .cart-right-title i {
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+  }
+  .cart-right-box {
+    width: 100%;
+    height: 280px;
+    background-color: white;
+    margin-top: 50px;
+  }
+  .cart-right-continue {
+    background-color: #c9c7bb;
+    width: 350px;
+    height: 50px;
+    margin-top: 50px;
+    padding: 4px;
+  }
+  .cart-right-continue > p {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Cormorant SC';
+    font-weight: bold;
+  }
+  .cart-right-continue > p > span {
+    font-family: 'Cormorant SC';
+    font-weight: bold;
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 837px) {
+  .cart-menu {
+    width: 1200px;
+    height: 100vh;
+    background-color: #f2f1ee;
+    position: fixed;
+    right: 0;
+    display: flex;
+    padding: 50px 100px 0 50px;
+    z-index: 100;
+  }
+  .cart-left {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart-left-title {
+    padding: 0 20px 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #c9c7bb;
+    font-family: 'Cormorant SC';
+    font-weight: bold;
+  }
+  .cart-left-box {
+    margin-top: 50px;
+  }
+  .cart-left-box:last-child {
+    margin-top: 72px;
+  }
+  .cart-left-box p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .cart-left-photo {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+  }
+  .cart-right {
+    padding-left: 50px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cart-right-title {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid #c9c7bb;
+    padding-bottom: 10px;
+    font-family: 'Cormorant SC';
+    font-weight: bold;
+    position: relative;
+  }
+  .cart-right-title i {
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+  }
+  .cart-right-box {
+    width: 100%;
+    height: 280px;
+    background-color: white;
+    margin-top: 50px;
+  }
+  .cart-right-continue {
+    background-color: #c9c7bb;
+    width: 350px;
+    height: 50px;
+    margin-top: 50px;
+    padding: 4px;
+  }
+  .cart-right-continue > p {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Cormorant SC';
+    font-weight: bold;
+  }
+  .cart-right-continue > p > span {
+    font-family: 'Cormorant SC';
+    font-weight: bold;
+    font-size: 32px;
+  }
+}
+/* 장바구니메뉴 끝 */
 
 p {
   font-family: 'Pretendard-Regular';
@@ -113,12 +520,13 @@ h4 {
 }
 .detailCnt1_1 {
   width: 100%;
-  height: 35.5vw;
-  padding-top: 11vw;
+  height: 32.5vw;
+  padding-top: 8vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
   justify-content: space-between;
+  justify-items: center;
   gap: 0.6vw;
 }
 
@@ -163,16 +571,6 @@ h4 {
   align-self: center;
   /* transition: 0.3s ease-in-out; */
 }
-/* 
-.cnt1_2img {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 12.2vw;
-  height: 12.2vw;
-  border: none;
-  z-index: 100;
-} */
 
 .imgBox1 {
   position: absolute;
@@ -314,19 +712,24 @@ h4 {
 .detailList1 {
   width: 100%;
   z-index: 100;
-  /* padding-top: 9vw; */
   position: sticky;
-  top: 0;
-  height: 6.15vw;
+  top: 100px;
+  height: 5vw;
   background-color: white;
+}
+.MiniI {
+  padding-bottom: 100px;
 }
 
 .detailList1 > ul {
   overflow: hidden;
+  height: 5vw;
   cursor: pointer;
+  align-content: center;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
+
   justify-content: space-evenly;
   padding: 2vw;
   border-bottom: 0.8px solid black;
@@ -354,7 +757,7 @@ h4 {
   background-color: rgba(0, 0, 0, 21%);
   height: 86vw;
   width: 100%;
-  z-index: 90;
+  z-index: 3;
 
   display: inline-block;
 }
@@ -383,11 +786,11 @@ h4 {
 
 #d_img_1 div:nth-child(2) {
   position: absolute;
-  top: 62vw;
+  top: 56vw;
   left: 0;
   width: 100%;
   height: 30vw;
-  z-index: 50;
+  z-index: 3;
   text-align: center;
   justify-content: center;
   line-height: 4vw;
@@ -418,7 +821,7 @@ h2 {
 #d_img_2 div:nth-child(2) {
   width: 100%;
   height: 30vw;
-  z-index: 50;
+  z-index: 3;
   text-align: center;
   justify-content: center;
   line-height: 4vw;
@@ -510,7 +913,7 @@ h2 {
   background-color: rgba(0, 0, 0, 20%);
   height: 30vw;
   width: 100%;
-  z-index: 90;
+  z-index: 3;
   position: relative;
 }
 
@@ -529,7 +932,7 @@ h2 {
   font-family: 'MonoplexKR-Regular';
   font-weight: 900;
   position: absolute;
-  z-index: 100;
+  z-index: 3;
   margin-left: 66vw;
   text-align: left;
   top: 50%;
@@ -741,7 +1144,7 @@ input {
 }
 /* Top 탑 버튼 & 감정 버튼 imoticon 픽스드 */
 #btnScrollToTop {
-  z-index: 150;
+  z-index: 3;
   overflow: hidden;
   position: fixed;
   right: 20px;
@@ -759,11 +1162,11 @@ input {
 }
 
 #btnScrollToImotion {
-  z-index: 150;
+  z-index: 101;
 }
 
 #btnScrollToImotion img {
-  z-index: 150;
+  z-index: 10;
   overflow: hidden;
   width: 40px;
   height: 40px;
@@ -795,10 +1198,54 @@ input {
 }
 
 #btnScrollToTop:active {
-  z-index: 150;
+  z-index: 10;
   background: #756e6f;
 }
+@media screen and (max-width: 1634px) {
+  .detailCnt1_1 {
+    padding-top: 10vw;
+  }
 
+  .MiniI {
+    padding-top: 1.2vw;
+  }
+}
+@media screen and (max-width: 1434px) {
+  .detailCnt1_1 {
+    padding-top: 12vw;
+  }
+  .MiniI {
+    padding-top: 2.2vw;
+  }
+}
+@media screen and (max-width: 1234px) {
+  .detailCnt1_1 {
+    padding-top: 14vw;
+  }
+
+  .MiniI {
+    padding-top: 2.8vw;
+  }
+}
+@media screen and (max-width: 1114px) {
+  .detailCnt1_1 {
+    padding-top: 16vw;
+  }
+  .MiniI {
+    padding-top: 3.6vw;
+  }
+}
+@media screen and (max-width: 1034px) {
+  .detailCnt1_1 {
+    padding-top: 19vw;
+  }
+  .MiniI {
+    padding-top: 4.8vw;
+  }
+  #d_img_1 div:nth-child(2) {
+    top: 69vw;
+  }
+}
 /* 태블릿 사이즈 */
 
 @media screen and (max-width: 834px) {
@@ -808,6 +1255,7 @@ input {
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    padding-top: 170px;
   }
   .detail1_1 {
     margin-bottom: 0vw;
@@ -903,7 +1351,7 @@ input {
   }
 
   .detail_aria3 {
-    margin-top: 6vw;
+    margin-top: 12vw;
   }
 
   .cover:nth-child(1) {
@@ -1011,7 +1459,9 @@ input {
     margin: 1vw 0.6vw;
     font-size: 0.6vw;
   }
-
+  #d_img_1 div:nth-child(2) {
+    top: 116vw;
+  }
   .box {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1023,15 +1473,19 @@ input {
 /* 모바일 사이즈 */
 @media (max-width: 499px) {
   .detailList1 {
-    height: 7.7vw;
-    margin-top: 34vw;
+    height: 4.7vw;
+    margin-top: 33vw;
   }
+
   .box {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
     padding: 6.81vw 4.01vw 4.01vw;
     justify-content: center;
+  }
+  #d_img_1 div:nth-child(2) {
+    top: 126vw;
   }
 }
 @media screen and (max-width: 414px) {
@@ -1043,7 +1497,7 @@ input {
     align-items: center;
   }
   .cnt1_1img {
-    margin-top: 14vw;
+    margin-top: 1vw;
     position: relative;
     width: 68vw;
     height: 68vw;
@@ -1062,7 +1516,7 @@ input {
     height: 34vw;
   }
   .detailList1 {
-    height: 7.7vw;
+    height: 4.7vw;
     margin-top: 38vw;
   }
 
@@ -1109,7 +1563,7 @@ input {
   }
 
   #d_img_1 div:nth-child(2) {
-    top: 190vw;
+    top: 198vw;
   }
 
   .detail_aria2 {
@@ -1160,3 +1614,71 @@ input {
     cursor: pointer;
   } */
 }
+/* 푸터시작 */
+footer {
+  background-color: #f6f3ee;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo {
+  margin-right: 20%;
+}
+.footer-logo img {
+  width: 200px;
+}
+.footer-word {
+  font-size: 16px;
+}
+.footer-social {
+  margin-top: 50px;
+  font-size: 16px;
+  display: flex;
+}
+.footer-social p:not(:first-child) {
+  padding: 0 20px;
+}
+.footer-social p:first-child {
+  padding-right: 20px;
+}
+.footer-social p:not(:last-child) {
+  border-right: 1px solid black;
+}
+@media (max-width: 834px) {
+  footer {
+    height: 200px;
+  }
+  .footer-logo {
+    margin-right: 10%;
+  }
+  .footer-logo img {
+    width: 150px;
+  }
+  .footer-word {
+    font-size: 14px;
+  }
+  .footer-social {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 414px) {
+  footer {
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-evenly;
+  }
+  .footer-logo {
+    margin: 0;
+  }
+  .footer-word {
+    font-size: 12px;
+  }
+  .footer-social {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+/* 푸터끝 */
