@@ -582,6 +582,8 @@ p {
   color: #c9c7bb;
 }
 .cnt1-1 {
+  width: 100%;
+  height: max-content;
   padding: 2vw 22vw;
   padding-top: 120px;
   display: flex;
@@ -712,7 +714,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(23%, auto));
   gap: 0.6vw;
-
+  align-self: center;
   justify-content: space-evenly;
 }
 
@@ -860,7 +862,7 @@ p {
   }
 
   .newArr {
-    left: -10vw;
+    left: -9vw;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -1008,24 +1010,108 @@ p {
     padding-top: 110px;
   }
   .cnt1-2 {
+    margin: 0 0vw;
     padding-top: 90px;
   }
 }
 @media (max-width: 499px) {
-  .mdescription > span {
-    line-height: 1.3vh;
+  .cnt1-1 {
+    margin-bottom: 14vw;
   }
-  .newSpan2 {
-    font-size: 4px;
+  .cnt1-2 {
+    margin: 0 7vw;
+    margin-top: 10vw;
   }
-  .bestList > li:nth-child(3) {
-    display: none;
+  .cnt1-3 {
+    margin: 0 7vw;
+  }
+
+  .newArr {
+    top: 22vw;
+    left: -14vw;
+  }
+  .newArr > a {
+    width: 28vw;
+    height: 28vw;
+  }
+  .newArr a:hover {
+    width: 28vw;
+    height: 28vw;
+  }
+  .newArr > .description,
+  .newArr > .description > div {
+    left: 28vw;
+    width: 30vw;
+    height: 28vw;
+  }
+  .newArr > .description > div h2 {
+    padding: 5px;
+    font-size: 15px;
   }
   .bestList {
     border-top: 1px solid black;
     justify-content: space-evenly;
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bestList li img {
+    width: 28vw;
+    height: 28vw;
+    margin-top: 10px;
+  }
+  .cnt1-2 h2,
+  .cnt1-3 h2 {
+    line-height: 22px;
+    font-size: 15px;
+  }
+  .cnt1-2 div p,
+  .cnt1-3 div p {
+    line-height: 22px;
+    font-size: 13px;
+  }
+  .best_text span,
+  .best_text h4 {
+    line-height: 3.4vw;
+  }
+  .productList {
+    border-top: 1px solid black;
+    justify-content: space-evenly;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .productList li {
+    padding-bottom: 20px;
+  }
+  .productList li img {
+    width: 28vw;
+    height: 28vw;
+    margin-top: 10px;
+  }
+
+  .mdescription > span {
+    line-height: 2vh;
+  }
+  .newSpan2 {
+    display: none;
+  }
+  .newSpan {
+    padding: 2px;
+    line-height: 10px;
+    display: block;
+  }
+  .bestList > li:nth-child(3) {
+    display: none;
+  }
+  .list_text span,
+  .list_text h4 {
+    line-height: 3.4vw;
+  }
+  .imti li {
+    padding: 10px;
+    margin-bottom: 0px;
   }
 }
 /* 모바일 사이즈 */
@@ -1041,17 +1127,16 @@ p {
   }
   .imti li i {
     font-size: 16px;
-    /* padding: 1.8vw; */
-    width: 6px;
-    height: 6px;
+    /* width: 4px;
+    height: 4px; */
   }
   .bestList .imti,
   .productList .imti {
-    padding: 4px;
+    padding: 2px;
   }
   .cnt1-2,
   .cnt1-3 {
-    padding: 20px 40px;
+    padding: 0 40px;
     padding-top: 40px;
   }
   .cnt1-2 {
@@ -1066,31 +1151,48 @@ p {
   }
 
   .cnt1-1 {
-    /* padding-top: 120px; */
-    /* margin-bottom: 10vw; */
-    /* padding: 12vw; */
     justify-content: center;
   }
 
   .newArr > a {
-    width: 24vw;
-    height: 24vw;
+    width: 28vw;
+    height: 28vw;
   }
 
   .newArr > a:hover {
-    width: 24vw;
-    height: 24vw;
+    width: 28vw;
+    height: 28vw;
   }
   .newArr > .description {
     position: relative;
   }
+  .newArr > .description,
   .newArr > .description > div {
-    left: 24vw;
-    top: -2vw;
-    /* top: 30px; */
-    width: 24vw;
-    height: 24vw;
-    /* line-height: 1vw; */
+    width: 32vw;
+    height: 28vw;
+    left: 14vw;
+  }
+
+  .newArr > .description > div h2 {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .bestList {
+    border-top: 1px solid black;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mdescription > span {
+    line-height: 20px;
+  }
+  .newSpan2 {
+    display: none;
+  }
+  .newSpan {
+    padding: 2px;
+    line-height: 10px;
+    display: block;
   }
 }
 
