@@ -225,6 +225,10 @@ function listList(items) {
               <h4>${item.price}</h4>
           </div>
       </div>`;
+    const ffhover = document.querySelectorAll('.ff');
+    ffhover.forEach(item => {
+      item.style.transition = 'all 1s ';
+    });
     $productList.appendChild($li);
   });
 

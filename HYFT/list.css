@@ -536,7 +536,9 @@ p {
   transform: scale(1.1);
   color: #000;
 }
-
+.ff:hover {
+  transition: all 0.3s ease-in-out;
+}
 .lonleyImt {
   width: 1.2vw;
   height: 1.2vw;
@@ -653,8 +655,9 @@ p {
 .newArr > .description > div h2 {
   line-height: 2.6vw;
   font-size: 1.7vw;
-  margin-right: 2vw;
-  text-align: start;
+  /* margin-right: 2vw; */
+  text-align: end;
+  font-style: italic;
 }
 .newSpan2 {
   display: none;
