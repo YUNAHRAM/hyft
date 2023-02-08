@@ -79,22 +79,33 @@ function moveCursor() {
 }
 setInterval('moveCursor()', 30);
 
+// fixed 버튼 스크롤 탑으로 이동
+const $btnScrollToTop = document.querySelector('#btnScrollToTop');
+const $totop = document.querySelector('.detailContainer');
+$btnScrollToTop.addEventListener('click', function () {
+  // window.scrollTo(0,0);
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+
 //감정 feelList clk클릭 이벤트 클릭시 이동하기
 //토글 만들기
 const $iClk = document.querySelectorAll('.clickE');
 
 const $btnScrollToImotion = document.querySelectorAll('.im');
 
-const imgs = btnScrollToImotion.querySelectorAll('.btnScrollToImotion>img');
+// const imgs = btnScrollToImotion.querySelectorAll('.btnScrollToImotion>img');
 
 const $cursor1 = document.getElementById('cursor');
-console.log($cursor1);
+// console.log($cursor1);
 
 $btnScrollToImotion.forEach((img, idx) => {
-  console.log(img.src);
+  //   console.log(img.src);
   img.addEventListener('click', e => {
     $cursor1.style.backgroundImage = `url(${e.target.src})`;
-    // img.src.classList.toggle('selected');
   });
 });
 
@@ -131,18 +142,6 @@ function tabResize() {
   //   };
 }
 tabResize();
-
-// fixed 버튼 스크롤 탑으로 이동
-const $btnScrollToTop = document.querySelector('#btnScrollToTop');
-$btnScrollToTop.addEventListener('click', function () {
-  // window.scrollTo(0,0);
-
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth',
-  });
-});
 
 //BEST , LIST 이미지 마우스 호버 이미지 변경
 const $bestList = document.querySelector('.bestList');
