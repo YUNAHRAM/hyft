@@ -61,13 +61,6 @@ button {
   font-style: normal;
 }
 
-html,
-body {
-  /* overflow-x: hidden; */
-  scroll-behavior: smooth;
-  width: 100%;
-  height: 0 auto;
-}
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @font-face {
   font-family: 'Pretendard-Regular';
@@ -479,7 +472,20 @@ header {
   }
 }
 /* 장바구니메뉴 끝 */
-
+html {
+  width: 100%;
+}
+/* body{
+   width: 100%;
+} */
+html,
+body {
+  background-color: #fbf9f7;
+  /* overflow-x: hidden; */
+  /* scroll-behavior: smooth; */
+  /* width: 100%; */
+  height: 0 auto;
+}
 p {
   font-family: 'Pretendard-Regular';
   font-size: 0.9vw;
@@ -487,7 +493,7 @@ p {
 
 span {
   font-family: 'MonoplexKR-Regular';
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   font-weight: bold;
 }
 
@@ -512,6 +518,8 @@ h4 {
 }
 
 .detailContainer {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
 }
@@ -724,6 +732,7 @@ h4 {
   background-color: white;
 }
 .MiniI {
+  width: 100%;
   padding-bottom: 100px;
 }
 
@@ -779,12 +788,15 @@ h4 {
 #d_img_1 {
   width: 100%;
 }
+#d_img_1 div {
+  width: 100%;
+}
 
 #d_img_1 div:first-child {
   width: 100%;
   height: 30vw;
   z-index: -1;
-  position: relative;
+
   background: url(./img/detail1.jpg) fixed no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -887,6 +899,9 @@ h2 {
 }
 
 /* 움직이는 텍스트 영역 */
+.detail_ariaText {
+  width: 100%;
+}
 .cover {
   overflow-x: hidden;
   width: 100%;
@@ -1011,12 +1026,13 @@ h2 {
   font-family: 'Pretendard-Regular';
   font-size: 0.6vw;
   border: none;
+  background-color: #dbd8d9;
 }
 
 .d_box1 > button,
 input {
   font-family: 'Pretendard-Regular';
-  font-size: 0.6vw;
+  font-size: 0.7vw;
   padding: 0.8vw 4vw;
   border-radius: 6vw;
 }
@@ -1035,7 +1051,10 @@ input {
   justify-content: space-between;
   line-height: 220%;
 }
-
+.d_box1 > button:hover {
+  background-color: #b6b3b4;
+  color: white;
+}
 .d_box2 > div > span {
   display: block;
 }
@@ -1043,14 +1062,16 @@ input {
 /* 커뮤니티 컨테이너 */
 
 .d_community {
+  width: 100%;
+  height: 100%;
   margin: 10vw 0vw;
   border-top: 0.1vw solid #ccc;
 }
 
 .d_community > div {
-  margin: 6vw 0vw;
+  margin-top: 6vw;
   width: 100%;
-  height: 50vw;
+  /* height: 50vw; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
@@ -1065,8 +1086,8 @@ input {
 .card {
   display: flex;
   justify-content: center;
-  width: 18vw;
-  height: 20vw;
+  width: 16vw;
+  height: 16vw;
   cursor: pointer;
 }
 
@@ -1146,7 +1167,7 @@ input {
   -webkit-line-clamp: 5;
 }
 .contentBox p {
-  font-size: 0.9vw;
+  font-size: 0.8vw;
 }
 /* Top 탑 버튼 & 감정 버튼 imoticon 픽스드 */
 #btnScrollToTop {
@@ -1421,6 +1442,7 @@ input {
   input {
     padding: 0.6vw 2vw;
   }
+
   .d_community > div {
     display: flex;
   }
@@ -1492,6 +1514,10 @@ input {
     width: 28vw;
     height: 20vw;
     cursor: pointer;
+  }
+  .d_box1 > button,
+  input {
+    font-size: 9px;
   }
 }
 /* 모바일 사이즈 */
@@ -1586,7 +1612,18 @@ input {
   }
 
   #d_img_1 div:nth-child(2) {
-    top: 198vw;
+    top: 192vw;
+  }
+  #d_img_1 div h4,
+  #d_img_2 div h4 {
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: lighter;
+  }
+  #d_img_1 div h2 {
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 12px;
   }
 
   .detail_aria2 {
@@ -1599,9 +1636,9 @@ input {
     height: 38vw;
   }
   .detail2_text {
-    line-height: 4vw;
-    margin: 4vw;
-    font-size: 0.9vw;
+    line-height: 18px;
+    margin: 2vw;
+    font-size: 8px;
     font-weight: lighter;
   }
   .detail_aria3 {
