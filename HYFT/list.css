@@ -536,9 +536,9 @@ p {
   transform: scale(1.1);
   color: #000;
 }
-.ff:hover {
+/* .ff:hover {
   transition: all 0.3s ease-in-out;
-}
+} */
 .lonleyImt {
   width: 1.2vw;
   height: 1.2vw;

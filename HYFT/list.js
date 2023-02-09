@@ -166,7 +166,7 @@ fetch('./imotions.json')
   });
 
 function imotionList(imotions) {
-  console.log('되나용');
+  //   console.log('되나용');
 }
 
 // BEST LIST
@@ -191,11 +191,16 @@ function makeList(items) {
             </div>
         </div>
       `;
+    // const wwhover = document.querySelectorAll('.ww');
+    // wwhover.forEach(item => {
+    //   item.style.transition = 'all 0.2s ';
+    // });
     $bestList.appendChild($li);
   });
   // hoverEvent(items);
   const $ww = document.querySelectorAll('.ww');
   $ww.forEach((item, idx) => {
+    // setTimeout($ww, 1300);
     item.addEventListener('mouseover', () => {
       item.src = `${items[idx].img_overEffect}`;
     });
@@ -225,10 +230,10 @@ function listList(items) {
               <h4>${item.price}</h4>
           </div>
       </div>`;
-    const ffhover = document.querySelectorAll('.ff');
-    ffhover.forEach(item => {
-      item.style.transition = 'all 1s ';
-    });
+    // const ffhover = document.querySelectorAll('.ff');
+    // ffhover.forEach(item => {
+    //   item.style.transition = 'all 0.2s ';
+    // });
     $productList.appendChild($li);
   });
 
@@ -242,6 +247,10 @@ function listList(items) {
       item.src = `${items[idx].img_picture}`;
     });
   });
+
+  //   function startAnimation() {
+  //     window.setTimeout($ww, 1000);
+  //   }
   //heart 좋아요 버튼 클릭 토글 이벤트 하트 버튼 색깔
   const $heartBtn = document.querySelectorAll('.heartBtn');
   const $heart = document.querySelectorAll('.heartBtn i');
