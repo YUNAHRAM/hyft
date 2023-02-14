@@ -621,7 +621,7 @@ h4 {
 
 .box2 {
   align-items: center;
-  background-color: #d9d9d9;
+  background-color: #f2f1ee;
   height: 8vw;
   width: 24vw;
 }
@@ -654,7 +654,7 @@ h4 {
 
 .box3 {
   align-self: center;
-  background-color: #d9d9d9;
+  background-color: #f2f1ee;
   height: 8vw;
   width: 24vw;
 }
@@ -681,6 +681,7 @@ h4 {
 
 .box3_box > h2 {
   align-self: center;
+  color: #333;
   text-align: end;
   vertical-align: middle;
 }
@@ -770,7 +771,7 @@ h4 {
 }
 
 .detailCnt1_2 {
-  background-color: rgba(0, 0, 0, 21%);
+  background-color: rgba(196, 178, 163, 0.664);
   height: 86vw;
   width: 100%;
   z-index: 3;
@@ -916,11 +917,11 @@ h2 {
 
 .cover:nth-child(1) {
   margin-top: 24vh;
-  background-color: #9b9b9b;
+  background-color: #e9ddd4;
 }
 
 .cover:nth-child(2) {
-  background-color: #d9d9d9;
+  background-color: #d4c8bf;
   justify-content: flex-end;
 }
 
@@ -932,7 +933,7 @@ h2 {
 
 .detail_aria3 {
   margin-top: 10vw;
-  background-color: rgba(0, 0, 0, 20%);
+  background-color:  rgba(196, 178, 163, 0.664);
   height: 30vw;
   width: 100%;
   z-index: 3;
