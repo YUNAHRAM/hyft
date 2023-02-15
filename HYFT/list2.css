@@ -535,7 +535,7 @@ p {
 .selected {
   transition: 0.1s ease-out;
   transform: scale(1.1);
-  color: #000;
+  color: #000 !important;
 }
 /* .ff:hover {
   transition: all 0.3s ease-in-out;
@@ -587,30 +587,29 @@ p {
   color: #c9c7bb;
 }
 .cnt1-1 {
-  background-color: rgba(247, 227, 115, 0.87);
+  /* background-color: #dddcd8d0; */
   width: 100%;
-  /* position: relative; */
-  /* height: 640px; */
-  /* padding: 2vw 22vw; */
-  padding-top: 100px;
-  /* display: flex; */
-  align-items: center;
+  justify-content: center;
+  height: 30vw;
+  position: relative;
+  top: 4vw;
 }
+
 .feelList {
   z-index: 2;
   position: absolute;
   left: 18vw;
-  top: 10vw;
+  top: 6vw;
 }
 .clickE {
   font-size: 2vw;
-  color: #e9ddd4;
+  color: #a19c98;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
   font-style: italic;
 }
 .clickE:hover {
-  color: rgb(241, 134, 12);
+  color: rgb(27, 27, 27);
   cursor: pointer;
   transition: 0.2s ease-out;
 }
@@ -619,14 +618,48 @@ p {
 }
 /* newTop 신상품 소개 배너 */
 .newTop {
-  /* background: url(./imgnew/banner1.png) no-repeat fixed; */
-  background: url(./imgnew/Untitled-2.png) no-repeat fixed;
-  background-size: contain;
+  background: url(./imgnew/Untitled-2.png) no-repeat center;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  position: absolute;
   width: 100%;
-  height: 300px;
-  /* background-position: top; */
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+}
+
+.newtop-txt {
+  text-align: left;
+  line-height: 2vw;
+  position: absolute;
+  top: 10vw;
+  left: 33%;
+  color: white;
+}
+.newTop > div:nth-child(2) span {
+  font-family: 'Cormorant SC';
+  font-style: italic;
+  font-size: 2vw;
+  line-height: 2vw;
+}
+.newTop > div:nth-child(2) p {
+  font-family: 'Pretendard-Regular';
+
+  font-size: 1.4vw;
+  line-height: 2vw;
+}
+.newtop-txt > div {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 10vw;
+}
+.fi-ts-arrow-up-right {
+  font-size: 2.6vw;
+  /* transform: rotate(-45deg); */
+  color: white;
+  width: 30vw;
+  height: 30vw;
+  text-align: end;
+  cursor: pointer;
 }
 
 /*  New Arrival */
@@ -840,6 +873,11 @@ p {
 }
 
 /* 태블릿 사이즈 */
+@media screen {
+  .feelList {
+    top: 8vw;
+  }
+}
 
 @media screen and (max-width: 834px) {
   .cursor {
@@ -857,61 +895,56 @@ p {
     padding: 6vw 12vw;
   }
   .cnt1-2 {
-    padding-top: 8vw;
+    margin-top: 10vw;
   }
+
   .cnt1-1 {
+    background: url('./imgnew/posterbest.jpg') no-repeat;
+    top: 100px;
     height: 40vw;
-    /* padding: 10vw; */
     display: flex;
     flex-direction: row;
     position: relative;
-    justify-content: center;
+    background-size: contain;
+    background-position: right;
+    background-color: #dddcd8d0;
   }
 
   .feelList {
+    top: 100px;
     justify-content: center;
+    height: 40px;
     width: 100%;
     padding: 0;
     display: flex;
     position: sticky;
-    top: 100px;
     flex-direction: row;
-    background-color: #e9ddd486;
-    position: absolute;
+    background-color: #e9ddd4e5;
   }
 
   .feelList li {
-    justify-content: space-evenly;
     text-align: center;
-    padding: 1vw;
+    padding: 10px;
     color: #c2b1a5;
     font-size: 2.4vw;
     align-items: center;
   }
-
-  .newArr {
-    left: -9vw;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    top: 80px;
+  .feelList li:hover {
+    color: #524b4b;
   }
-  .newArr > a {
-    background: url(./img/cat1-5.jpg) no-repeat;
-    background-size: cover;
-    align-self: center;
-    width: 20vw;
-    height: 20vw;
-    overflow: hidden;
+  .newTop {
+    background: none;
+    background-size: contain;
   }
-  .newArr a:hover {
-    width: 20vw;
-    height: 20vw;
+  .newtop-txt {
+    top: 20vw;
+    left: 23%;
   }
-  .newArr > .description,
-  .newArr > .description > div {
-    width: 20vw;
-    height: 20vw;
+  .newtop-txt span {
+    font-size: 20px;
+  }
+  .newtop-txt p {
+    font-size: 20px;
   }
 
   .detail_animation {
@@ -1020,12 +1053,9 @@ p {
   }
 }
 @media (max-width: 750px) {
-  /* .cnt1-1 {
-    padding-top: 90px;
-  }
   .cnt1-2 {
-    padding-top: 60px;
-  } */
+    margin-top: 100px;
+  }
   .newSpan {
     display: none;
   }
@@ -1034,48 +1064,22 @@ p {
   }
 }
 @media (max-width: 680px) {
-  .cnt1-1 {
-    padding-top: 110px;
-  }
   .cnt1-2 {
-    margin: 0 0vw;
-    padding-top: 90px;
+    margin-top: 100px;
   }
 }
 @media (max-width: 499px) {
   .cnt1-1 {
-    margin-bottom: 14vw;
+    top: 100px;
   }
   .cnt1-2 {
     margin: 0 7vw;
-    margin-top: 10vw;
+    margin-top: 18vw;
   }
   .cnt1-3 {
     margin: 0 7vw;
   }
 
-  .newArr {
-    top: 22vw;
-    left: -14vw;
-  }
-  .newArr > a {
-    width: 28vw;
-    height: 28vw;
-  }
-  .newArr a:hover {
-    width: 28vw;
-    height: 28vw;
-  }
-  .newArr > .description,
-  .newArr > .description > div {
-    left: 28vw;
-    width: 30vw;
-    height: 28vw;
-  }
-  .newArr > .description > div h2 {
-    padding: 5px;
-    font-size: 15px;
-  }
   .bestList {
     border-top: 1px solid black;
     justify-content: space-evenly;
@@ -1165,10 +1169,10 @@ p {
   .cnt1-2,
   .cnt1-3 {
     padding: 0 40px;
-    padding-top: 40px;
+    margin-top: 60px;
   }
   .cnt1-2 {
-    padding-top: 100px;
+    margin-top: 120px;
   }
   .cnt1-2 > h2 {
     text-align: center;
@@ -1182,29 +1186,6 @@ p {
     justify-content: center;
   }
 
-  .newArr > a {
-    width: 28vw;
-    height: 28vw;
-  }
-
-  .newArr > a:hover {
-    width: 28vw;
-    height: 28vw;
-  }
-  .newArr > .description {
-    position: relative;
-  }
-  .newArr > .description,
-  .newArr > .description > div {
-    width: 32vw;
-    height: 28vw;
-    left: 14vw;
-  }
-
-  .newArr > .description > div h2 {
-    padding: 5px;
-    font-size: 14px;
-  }
   .bestList {
     border-top: 1px solid black;
     justify-content: space-evenly;
