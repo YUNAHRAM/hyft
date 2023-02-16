@@ -66,7 +66,7 @@ img {
   height: 3rem;
   background: url('./SVG/LONELY.svg');
   position: absolute;
-  z-index: 1000;
+  z-index: 9999;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: all 0.3s ease;
@@ -202,14 +202,18 @@ p {
   font-weight: 900;
   font-style: italic;
 }
+.clickE.active {
+  color: rgb(27, 27, 27);
+  transition: 0.2s ease-out;
+}
 .clickE:hover {
   color: rgb(27, 27, 27);
   cursor: pointer;
   transition: 0.2s ease-out;
 }
-.selected {
+/* .selected {
   color: #000;
-}
+} */
 /* newTop 신상품 소개 배너 */
 .newTop {
   display: inline-block;
@@ -365,6 +369,7 @@ p {
 }
 
 /* Top 탑 버튼 & 감정 버튼 imoticon 픽스드 */
+
 #btnScrollToTop {
   overflow: hidden;
   position: fixed;
@@ -407,6 +412,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 9998;
 }
 
 #btnScroll:active {

@@ -51,8 +51,6 @@ const $iClk = document.querySelectorAll('.clickE');
 
 const $btnScrollToImotion = document.querySelectorAll('.im');
 
-// const imgs = btnScrollToImotion.querySelectorAll('.btnScrollToImotion>img');
-
 const $cursor1 = document.getElementById('cursor');
 // console.log($cursor1);
 
@@ -60,6 +58,24 @@ $btnScrollToImotion.forEach((img, idx) => {
   //   console.log(img.src);
   img.addEventListener('click', e => {
     $cursor1.style.backgroundImage = `url(${e.target.src})`;
+  });
+});
+
+// 감정 리스트 feelList clk클릭 이벤트 감정클릭
+// 토글 만들기
+
+const $feelclk = document.querySelectorAll('.clickE');
+const $imgs = document.querySelectorAll('#btnScrollToImotion img');
+
+$feelclk.forEach((text, idx) => {
+  //   console.dir(text.innerHTML);
+  text.addEventListener('click', e => {
+    $feelclk.forEach((item,index)=>{
+        item.classList.toggle('active',idx===index);
+        
+    })
+    // console.log($cursor1);
+    $cursor1.style.backgroundImage = `url(${$imgs[idx].src})`;
   });
 });
 
@@ -116,7 +132,7 @@ function makeList(items) {
     $li.innerHTML = `
         <div>
                 <div class="best_img">
-                    <img src="${item.img_picture}" alt=""  transition: all 0.2s; class="ww" cover ;>
+                    <a href="./detailmush.html"><img src="${item.img_picture}" alt=""  transition: all 0.2s; class="ww" cover ;></a>
                 </div>
             
            
@@ -134,6 +150,14 @@ function makeList(items) {
 
     $bestList.appendChild($li);
   });
+
+  //   const $bestclk = document.querySelector('.best_img>img');
+  //   const $aTag = document.createElement('a');
+  //   $aTag.addEventListener('click', () => {
+  //     console.log($bestclk);
+  //     // $aTag.innerHTML = 'href="./detailmush.html"';
+  //     $bestclk.href = './detailmush.html';
+  //   });
 
   const $ww = document.querySelectorAll('.ww');
   $ww.forEach((item, idx) => {
@@ -181,7 +205,6 @@ function listList(items) {
     });
   });
 
-  
   //heart 좋아요 버튼 클릭 토글 이벤트 하트 버튼 색깔
   const $heartBtn = document.querySelectorAll('.heartBtn');
   const $heart = document.querySelectorAll('.heartBtn i');
@@ -194,6 +217,3 @@ function listList(items) {
     });
   });
 }
-
-
-
