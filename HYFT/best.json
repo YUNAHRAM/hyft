@@ -1,11 +1,11 @@
 [
   {
-    "img_picture": "./img/best1.jpg",
-    "img_overEffect": "./img/hovers/hover-1.png",
-    "product_number": "circus boy band_013",
+    "img_picture": "./imgnew/mushroom.jpg",
+    "img_overEffect": "./imgnew/movemushroom.png",
+    "product_number": "Made by Me_013",
     "product_feel": "lonley",
-    "product_name": "Bear Hug Boy",
-    "price": "25,000",
+    "product_name": "my friend mushroom",
+    "price": "9,000",
     "href": "list.html"
   },
   {

@@ -40,11 +40,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
 
+    <!-- Swiper -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <!-- 플래티콘 -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+
     <!-- 파비콘 -->
     <link rel="icon" href="./pavi.ico" />
     <title>HYFT_˘◡˘ List_Page</title>
+
+    <!-- 헤더 CSS -->
+    <link rel="stylesheet" href="common.css">
 
 </head>
 
@@ -52,7 +61,7 @@
     <!-- 마우스 커서 -->
     <div class="cursor" id="cursor"></div>
     <!-- 헤더 -->
-    <!--헤더 시작 -->
+    <!-- 헤더시작 -->
     <header>
         <div class="header-container">
             <div class="header-left">
@@ -61,22 +70,29 @@
             <p>How You Feel Today?</p>
             <div class="header-right">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <a href="login.html">
+                <a href="/login">
                     <i class="fa-solid fa-user"></i>
                 </a>
             </div>
         </div>
     </header>
+    <div class="header-under">
+        <ul class="header-under-ul">
+            <li><a href="/product">shop</a></li>
+            <li><a href="/board">Community</a></li>
+            <li><a href="/magazine">magazine</a></li>
+        </ul>
+    </div>
     <div class="bar-menu hidden">
         <div class="bar-left">
             <div class="bar-img"></div>
         </div>
         <div class="bar-right">
-            <a href="">Shop</a>
-            <a href="">Community</a>
-            <a href="">Brand Story</a>
-            <a href="">Review</a>
-            <a href="">Q & A</a>
+            <a href="/product">Shop</a>
+            <a href="/board">Community</a>
+            <a href="/magazine">Magazine</a>
+            <a href="#">Q & a</a>
+            <a href="/login">Login</a>
             <div>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search" />
@@ -87,14 +103,14 @@
         <div class="cart-left">
             <div class="cart-left-title">YOU MAY LIKE</div>
             <div class="cart-left-box">
-                <div class="cart-left-photo"></div>
-                <p>상품이름</p>
-                <p>가격</p>
+                <div class="cart-left-photo1"></div>
+                <p>소품 인테리어 큐브 캔들</p>
+                <p>24,000원</p>
             </div>
             <div class="cart-left-box">
-                <div class="cart-left-photo"></div>
-                <p>상품이름</p>
-                <p>가격</p>
+                <div class="cart-left-photo2"></div>
+                <p>감성 무드등</p>
+                <p>41,000원</p>
             </div>
         </div>
         <div class="cart-right">
@@ -102,11 +118,29 @@
                 CART
                 <i class="fa-solid fa-xmark"></i>
             </div>
-            <div class="cart-right-box"></div>
-            <div class="cart-right-box"></div>
-            <div class="cart-right-continue">
-                <p><span>C</span>CONTINUE YOUR ORDER</p>
+            <div class="cart-right-box">
+                <div class="right_box_img">
+                    <img src="img/item/happyItem10.png" alt="" />
+                </div>
+                <div class="right_box_text">
+                    <p>포근한 차렵이불</p>
+                    <p>38,000원</p>
+                </div>
             </div>
+            <div class="cart-right-box">
+                <div class="right_box_img">
+                    <img src="img/item/recommendItem9.png" alt="" />
+                </div>
+                <div class="right_box_text">
+                    <p>크리스마스 포스터</p>
+                    <p>12,000원</p>
+                </div>
+            </div>
+            <a href="/myPage">
+                <div class="cart-right-continue">
+                    <p><span>C</span>ONTINUE YOUR ORDER</p>
+                </div>
+            </a>
         </div>
     </div>
     <!-- 헤더 끝 -->
@@ -117,7 +151,7 @@
         <!-- 상단 노출 페이지 좌-감정리스트 / 우-신상품 더보기 -->
         <div class="cnt1-1">
             <!-- Feel List -->
-            <ul class="feelList detail_animation" data-aos="fade-up" data-aos-offset="200" data-aos-mirror="true"
+            <ul class="feelList detail_animation" data-aos="fade-right" data-aos-offset="200" data-aos-mirror="true"
                 data-aos-once="false" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-delay="50">
                 <li class="clickE">#HAPPY</li>
                 <li class="clickE">#BORED</li>
@@ -129,12 +163,20 @@
             </ul>
 
             <!-- New Arrival 신상품 소개 -->
-            <div class="newTop">
-                <div></div>
-                <div class="newtop-txt">
-                    <span>NEW ARRIVAL</span>
+            <div class="swiper newTop swvisual">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-1"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-2"></div>
+                    </div>
+                </div>
+                <div class="newtop-txt detail_animation" data-aos="fade-up" data-aos-offset="400" data-aos-mirror="true"
+                    data-aos-once="false" data-aos-easing="ease-out-cubic" data-aos-duration="2200" data-aos-delay="150"">
+                    <a class=" newtxt" href=" ./detailmush.html"><span>NEW ARRIVAL</span>
                     <p>SEE YOUR INNERPEACE</p>
-                    <div><i class="fi fi-ts-arrow-up-right"></i></div>
+                    <div><i class=" fi fi-ts-arrow-up-right"></i></div></a>
                 </div>
             </div>
         </div>
@@ -163,12 +205,12 @@
         <!-- Top 탑 버튼 & 감정 버튼 imoticon 픽스드 -->
         <div id="btnScroll">
             <div id="btnScrollToImotion">
-                <img src="./SVG/HAPPY.svg" alt="#HAPPY face character" class="im"></a>
-                <img src="./SVG/BORED.svg" alt="#BORED face character" class="im">
-                <img src="./SVG/SAD.svg" alt="#SAD face character" class="im">
-                <img src="./SVG/NERVOUS.svg" alt="#NERVOUS face character" class="im">
-                <img src="./SVG/ANGRY.svg" alt="#ANGRY face character" class="im">
-                <img src="./SVG/LONELY.svg" alt="#ANGRY face character" class="im">
+                <img src="./svg/HAPPY.svg" alt="#HAPPY face character" class="im"></a>
+                <img src="./svg/BORED.svg" alt="#BORED face character" class="im">
+                <img src="./svg/SAD.svg" alt="#SAD face character" class="im">
+                <img src="./svg/NERVOUS.svg" alt="#NERVOUS face character" class="im">
+                <img src="./svg/ANGRY.svg" alt="#ANGRY face character" class="im">
+                <img src="./svg/LONELY.svg" alt="#ANGRY face character" class="im">
 
             </div>
             <button id="btnScrollToTop">
@@ -200,7 +242,9 @@
     </footer>
     <!-- 푸터끝 -->
 </body>
-<script src="./list.js"></script>
+<!-- 헤더 JS -->
+<script src="common.js"></script>
+<script src="./list2.js"></script>
 <script> AOS.init();</script>
 
 </html>
