@@ -462,19 +462,6 @@ p {
     /* background-color: #dddcd8d0; */
   }
 
-  .feelList {
-    /* display: none; */
-    /* top: 100px;
-    justify-content: center;
-    height: 40px;
-    width: 100%;
-    padding: 0;
-    display: flex;
-    position: sticky;
-    flex-direction: row;
-    background-color: #fff; */
-  }
-
   .feelList li {
     left: 2vw;
     text-align: left;
