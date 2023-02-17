@@ -1034,7 +1034,7 @@ input {
   }
 
   .detail_aria3 > div:first-child {
-    background: url('./img/dog1-6.jpg') no-repeat fixed;
+    background: url('./imgnew/mushroom.jpg') no-repeat fixed;
     background-size: cover;
     background-position: center center;
     position: absolute;
@@ -1256,12 +1256,12 @@ input {
   }
 
   .detail_aria3 > div:first-child {
-    background: url('./img/dog1-6.jpg') no-repeat center;
+    background: url('./imgnew/mushroom.jpg') no-repeat center;
     background-size: cover;
   }
 
   #d_img_1 div:first-child {
-    background: url(./img/detail1.jpg) no-repeat;
+    background: url(./imgnew/mush4.JPG) no-repeat;
     background-size: cover;
     background-position: bottom;
   }

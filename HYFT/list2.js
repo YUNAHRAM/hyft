@@ -52,11 +52,14 @@ const $iClk = document.querySelectorAll('.clickE');
 const $btnScrollToImotion = document.querySelectorAll('.im');
 
 const $cursor1 = document.getElementById('cursor');
-// console.log($cursor1);
 
 $btnScrollToImotion.forEach((img, idx) => {
   //   console.log(img.src);
   img.addEventListener('click', e => {
+    $feelclk.forEach((item, index) => {
+      item.classList.toggle('active', idx === index);
+      console.log(item);
+    });
     $cursor1.style.backgroundImage = `url(${e.target.src})`;
   });
 });
@@ -68,13 +71,10 @@ const $feelclk = document.querySelectorAll('.clickE');
 const $imgs = document.querySelectorAll('#btnScrollToImotion img');
 
 $feelclk.forEach((text, idx) => {
-  //   console.dir(text.innerHTML);
   text.addEventListener('click', e => {
-    $feelclk.forEach((item,index)=>{
-        item.classList.toggle('active',idx===index);
-        
-    })
-    // console.log($cursor1);
+    $feelclk.forEach((item, index) => {
+      item.classList.toggle('active', idx === index);
+    });
     $cursor1.style.backgroundImage = `url(${$imgs[idx].src})`;
   });
 });
