@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
 }
 /* 헤더 */
 body .hidden {
@@ -58,9 +58,10 @@ header.active {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  font-family: "Homemade Apple";
+  font-family: 'Homemade Apple';
   font-size: 20px;
   display: flex;
+
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -170,7 +171,7 @@ header.active {
   .bar-right a {
     text-decoration: none;
     color: black;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-size: 46px;
   }
   .bar-right input {
@@ -186,7 +187,7 @@ header.active {
   }
   .bar-right input::placeholder {
     color: black;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-size: 24px;
     text-align: center;
   }
@@ -208,7 +209,7 @@ header.active {
     justify-content: flex-end;
   }
   .bar-left .bar-img {
-    background: url("../img/listGif.gif") no-repeat;
+    background: url('../img/listGif.gif') no-repeat;
     width: 70%;
     height: 50%;
     background-size: cover;
@@ -233,7 +234,7 @@ header.active {
     justify-content: flex-end;
   }
   .bar-left .bar-img {
-    background: url("../img/listGif.gif") no-repeat;
+    background: url('../img/listGif.gif') no-repeat;
     width: 400px;
     height: 520px;
     margin-top: 80px;
@@ -248,7 +249,7 @@ header.active {
   .bar-right a {
     text-decoration: none;
     color: black;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-size: 60px;
   }
   .bar-right input {
@@ -264,7 +265,7 @@ header.active {
   }
   .bar-right input::placeholder {
     color: black;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-size: 30px;
     text-align: center;
   }
@@ -333,7 +334,7 @@ header.active {
     font-size: 20px;
     border-bottom: 1px solid #c9c7bb;
     padding-bottom: 10px;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-weight: bold;
     position: relative;
   }
@@ -370,11 +371,11 @@ header.active {
     text-align: center;
     color: white;
     font-size: 24px;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-weight: bold;
   }
   .cart-right-continue > p > span {
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-weight: bold;
     font-size: 32px;
   }
@@ -401,7 +402,7 @@ header.active {
     padding: 0 20px 10px;
     font-size: 20px;
     border-bottom: 1px solid #c9c7bb;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-weight: bold;
   }
   .cart-left-box {
@@ -418,14 +419,14 @@ header.active {
     width: 200px;
     height: 200px;
     background-color: white;
-    background: url("../img/item/bestItem10.png");
+    background: url('../img/item/bestItem10.png');
     background-size: cover;
   }
   .cart-left-photo2 {
     width: 200px;
     height: 200px;
     background-color: white;
-    background: url("../img/item/happyItem9.png");
+    background: url('../img/item/happyItem9.png');
     background-size: cover;
   }
   .cart-right {
@@ -441,7 +442,7 @@ header.active {
     font-size: 20px;
     border-bottom: 1px solid #c9c7bb;
     padding-bottom: 10px;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-weight: bold;
     position: relative;
   }
@@ -477,11 +478,11 @@ header.active {
     text-align: center;
     color: white;
     font-size: 24px;
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-weight: bold;
   }
   .cart-right-continue > p > span {
-    font-family: "Cormorant SC";
+    font-family: 'Cormorant SC';
     font-weight: bold;
     font-size: 32px;
   }

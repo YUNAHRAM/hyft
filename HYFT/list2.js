@@ -45,39 +45,30 @@ $btnScrollToTop.addEventListener('click', function () {
   });
 });
 
-//감정 feelList clk클릭 이벤트 클릭시 이동하기
-//토글 만들기
-const $iClk = document.querySelectorAll('.clickE');
+//감정 캐릭터 feelList clk클릭 이벤트 클릭시 이동하기
+// 캐릭터 마우스 커서 토글 만들기
 
 const $btnScrollToImotion = document.querySelectorAll('.im');
-
 const $cursor1 = document.getElementById('cursor');
 
-$btnScrollToImotion.forEach((img, idx) => {
-  //   console.log(img.src);
-  img.addEventListener('click', e => {
-    $feelclk.forEach((item, index) => {
-      item.classList.toggle('active', idx === index);
-      console.log(item);
-    });
-    $cursor1.style.backgroundImage = `url(${e.target.src})`;
-  });
-});
-
-// 감정 리스트 feelList clk클릭 이벤트 감정클릭
-// 토글 만들기
-
-const $feelclk = document.querySelectorAll('.clickE');
-const $imgs = document.querySelectorAll('#btnScrollToImotion img');
-
-$feelclk.forEach((text, idx) => {
-  text.addEventListener('click', e => {
+function $mouseClkEvent(item, idx) {
+  item.addEventListener('click', e => {
     $feelclk.forEach((item, index) => {
       item.classList.toggle('active', idx === index);
     });
     $cursor1.style.backgroundImage = `url(${$imgs[idx].src})`;
   });
-});
+}
+
+$btnScrollToImotion.forEach($mouseClkEvent);
+
+// 감정 리스트 feelList clk클릭 이벤트 감정클릭
+// 감정 & 캐릭터 마우스 커서 토글 만들기
+
+const $feelclk = document.querySelectorAll('.clickE');
+const $imgs = document.querySelectorAll('#btnScrollToImotion img');
+
+$feelclk.forEach($mouseClkEvent);
 
 // Swiper 배경 스와이퍼 처리
 
