@@ -20,7 +20,7 @@ button {
 .cursor {
   width: 3rem;
   height: 3rem;
-  background: url('./SVG/LONELY.svg');
+  background: url('./svg/LONELY.svg');
   border-radius: 100%;
   position: absolute;
   z-index: 1000;
@@ -63,12 +63,14 @@ button {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -81,6 +83,7 @@ button {
 html {
   width: 100%;
 }
+
 /* body{
    width: 100%;
 } */
@@ -92,6 +95,7 @@ body {
   /* width: 100%; */
   height: 0 auto;
 }
+
 p {
   font-family: 'Pretendard-Regular';
   font-size: 0.9vw;
@@ -129,9 +133,11 @@ h4 {
   display: flex;
   flex-direction: column;
 }
+
 .fi {
   cursor: pointer;
 }
+
 .detailCnt1_1 {
   width: 100%;
   height: 32.5vw;
@@ -144,7 +150,7 @@ h4 {
   gap: 0.6vw;
 }
 
-.detailCnt1_1 + div {
+.detailCnt1_1+div {
   display: flex;
   justify-content: center;
 }
@@ -165,12 +171,12 @@ h4 {
   height: 6vw;
 }
 
-.miniImg + div {
+.miniImg+div {
   width: 24vw;
   height: 6vw;
 }
 
-.miniImg > img {
+.miniImg>img {
   width: 5vw;
   height: 5vw;
   padding: 0.2vw;
@@ -219,7 +225,7 @@ h4 {
   line-height: 2vw;
 }
 
-.box1 > div {
+.box1>div {
   text-align: end;
   margin-right: 0.5vw;
 }
@@ -249,7 +255,7 @@ h4 {
   text-align: right;
 }
 
-.btnp > button {
+.btnp>button {
   align-self: center;
   text-align: right;
   justify-content: end;
@@ -278,13 +284,13 @@ h4 {
   justify-content: center;
 }
 
-.box3_box > h3 {
+.box3_box>h3 {
   align-self: center;
   text-align: start;
   vertical-align: middle;
 }
 
-.box3_box > h2 {
+.box3_box>h2 {
   align-self: center;
   color: #333;
   text-align: end;
@@ -317,18 +323,22 @@ h4 {
 .btncart {
   background-color: #9b9b9b;
 }
+
 .btncart:hover {
   background-color: #807e7eda;
   color: white;
 }
+
 .btnbuy {
   background-color: #231f20;
   color: white;
 }
+
 .btnbuy:hover {
   background-color: #6b6b6b;
   color: #f6f3ee;
 }
+
 /* 디테일 컨테이너 */
 .detailList1 {
   width: 100%;
@@ -338,12 +348,13 @@ h4 {
   height: 5vw;
   background-color: white;
 }
+
 .MiniI {
   width: 100%;
   padding-bottom: 100px;
 }
 
-.detailList1 > ul {
+.detailList1>ul {
   overflow: hidden;
   height: 5vw;
   cursor: pointer;
@@ -357,15 +368,16 @@ h4 {
   border-top: 0.1vw solid black;
 }
 
-.detailList1 > ul > a {
+.detailList1>ul>a {
   text-decoration: none;
 }
 
-.detailList1 > ul > a > li {
+.detailList1>ul>a>li {
   color: black;
   font-weight: bold;
   font-size: 1.2vw;
 }
+
 .detailList1 ul a li:hover {
   /* font-size: 1.7vw; */
   border-bottom: 0.2vw solid #9b9b9b;
@@ -394,6 +406,7 @@ h4 {
 #d_img_1 {
   width: 100%;
 }
+
 #d_img_1 div {
   width: 100%;
 }
@@ -441,6 +454,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
 #d_img_2 div:nth-child(2) {
   width: 100%;
   height: 30vw;
@@ -454,10 +468,12 @@ h2 {
   position: absolute;
   color: white;
 }
+
 #d_img_2 h4 {
   font-size: 1.2vw;
 }
-#d_img_3 > div {
+
+#d_img_3>div {
   position: relative;
   justify-content: center;
   justify-items: center;
@@ -507,6 +523,7 @@ h2 {
 .detail_ariaText {
   width: 100%;
 }
+
 .cover {
   overflow-x: hidden;
   width: 100%;
@@ -528,7 +545,7 @@ h2 {
   justify-content: flex-end;
 }
 
-.detail_ariaText > div > p {
+.detail_ariaText>div>p {
   display: flex;
   padding: 0.2vh 0;
   font-size: 3vw;
@@ -543,7 +560,7 @@ h2 {
   position: relative;
 }
 
-.detail_aria3 > div:first-child {
+.detail_aria3>div:first-child {
   background: url('./imgnew/mushroom.jpg') no-repeat fixed;
   background-size: contain;
   background-position: center left;
@@ -554,7 +571,7 @@ h2 {
   margin-left: 12vw;
 }
 
-.detail_aria3 > div:nth-child(2) {
+.detail_aria3>div:nth-child(2) {
   font-family: 'MonoplexKR-Regular';
   font-weight: 900;
   position: absolute;
@@ -564,18 +581,18 @@ h2 {
   top: 50%;
 }
 
-.detail_aria3 > div > h2 {
+.detail_aria3>div>h2 {
   line-height: 3.4vw;
 }
 
-.detail_aria4 > .dAria4_clc {
+.detail_aria4>.dAria4_clc {
   margin-top: 16vw;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
 
-.detail_aria4 > .dAria4_clc > div {
+.detail_aria4>.dAria4_clc>div {
   width: 14vw;
   height: 14vw;
   border-radius: 100%;
@@ -583,7 +600,7 @@ h2 {
   justify-self: center;
 }
 
-.detail_aria4 > .dAria4_clc > div > img {
+.detail_aria4>.dAria4_clc>div>img {
   width: 14vw;
   height: 14vw;
   object-fit: cover;
@@ -597,11 +614,11 @@ h2 {
   line-height: 4vw;
 }
 
-.detail_aria5 > div > img {
+.detail_aria5>div>img {
   width: 40vw;
 }
 
-.detail_aria5 > div > div {
+.detail_aria5>div>div {
   margin: 0 28vw;
   line-height: 4vw;
 }
@@ -627,14 +644,14 @@ h2 {
   margin: 6vw 18vw;
 }
 
-.d_box1 > button {
+.d_box1>button {
   font-family: 'Pretendard-Regular';
   font-size: 0.6vw;
   border: none;
   background-color: #dbd8d9;
 }
 
-.d_box1 > button,
+.d_box1>button,
 input {
   font-family: 'Pretendard-Regular';
   font-size: 0.7vw;
@@ -642,12 +659,12 @@ input {
   border-radius: 6vw;
 }
 
-.d_box2 > div > div:first-child {
+.d_box2>div>div:first-child {
   display: flex;
   margin: 3vw 18vw;
 }
 
-.d_box2 > div > div:nth-child(2) {
+.d_box2>div>div:nth-child(2) {
   /* display: grid;
     grid-template-columns: 10fr 0.5fr; */
   display: flex;
@@ -656,11 +673,13 @@ input {
   justify-content: space-between;
   line-height: 220%;
 }
-.d_box1 > button:hover {
+
+.d_box1>button:hover {
   background-color: #b6b3b4;
   color: white;
 }
-.d_box2 > div > span {
+
+.d_box2>div>span {
   display: block;
 }
 
@@ -673,7 +692,7 @@ input {
   border-top: 0.1vw solid #ccc;
 }
 
-.d_community > div {
+.d_community>div {
   margin-top: 6vw;
   width: 100%;
   /* height: 50vw; */
@@ -687,6 +706,7 @@ input {
   font-size: 1.5vw;
   color: #231f20;
 }
+
 /* community css */
 .card {
   display: flex;
@@ -715,6 +735,7 @@ input {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
   padding: 60px 20px 20px;
 }
+
 .plusbox {
   align-items: center;
   display: flex;
@@ -727,6 +748,7 @@ input {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
   padding: 20px 20px;
 }
+
 .plus {
   margin-top: 2vw;
   width: 90%;
@@ -737,6 +759,7 @@ input {
   justify-self: center;
   align-items: center;
 }
+
 .titleBox {
   display: flex;
   justify-content: space-between;
@@ -775,6 +798,7 @@ input {
 .contentBox p {
   font-size: 0.8vw;
 }
+
 /* Top 탑 버튼 & 감정 버튼 imoticon 픽스드 */
 #btnScrollToTop {
   z-index: 90;
@@ -808,7 +832,7 @@ input {
   box-sizing: border-box;
 }
 
-#btnScroll > div:first-child {
+#btnScroll>div:first-child {
   background-color: #fff;
   position: fixed;
   right: 20px;
@@ -834,6 +858,7 @@ input {
   z-index: 10;
   background: #756e6f;
 }
+
 @media screen and (max-width: 1634px) {
   .detailCnt1_1 {
     padding-top: 10vw;
@@ -843,14 +868,17 @@ input {
     padding-top: 1.2vw;
   }
 }
+
 @media screen and (max-width: 1434px) {
   .detailCnt1_1 {
     padding-top: 12vw;
   }
+
   .MiniI {
     padding-top: 2.2vw;
   }
 }
+
 @media screen and (max-width: 1234px) {
   .detailCnt1_1 {
     padding-top: 14vw;
@@ -860,31 +888,38 @@ input {
     padding-top: 2.8vw;
   }
 }
+
 @media screen and (max-width: 1114px) {
   .detailCnt1_1 {
     padding-top: 16vw;
   }
+
   .MiniI {
     padding-top: 3.6vw;
   }
 }
+
 @media screen and (max-width: 1034px) {
   .detailCnt1_1 {
     padding-top: 19vw;
   }
+
   .MiniI {
     padding-top: 4.8vw;
   }
+
   #d_img_1 div:nth-child(2) {
     top: 69vw;
   }
 }
+
 /* 태블릿 사이즈 */
 
 @media screen and (max-width: 834px) {
   .cursor {
     display: none;
   }
+
   .detailCnt1_1 {
     height: 46vw;
     display: flex;
@@ -893,9 +928,11 @@ input {
     align-items: center;
     padding-top: 170px;
   }
+
   .detail1_1 {
     margin-bottom: 0vw;
   }
+
   .cnt1_1img {
     position: relative;
     width: 38vw;
@@ -935,14 +972,16 @@ input {
   .box1_text {
     margin-top: 14vw;
   }
+
   .detailList1 {
     top: 38px;
   }
-  .detailList1 > ul {
+
+  .detailList1>ul {
     margin-top: 28vw;
   }
 
-  .box1_text > span {
+  .box1_text>span {
     display: none;
   }
 
@@ -960,17 +999,18 @@ input {
     justify-content: center;
   }
 
-  .box3_box > h3 {
+  .box3_box>h3 {
     align-self: center;
     text-align: center;
     vertical-align: middle;
   }
 
-  .box3_box > h2 {
+  .box3_box>h2 {
     align-self: center;
     text-align: center;
     vertical-align: middle;
   }
+
   .btnB {
     height: 3.8vw;
     width: 16vw;
@@ -1001,7 +1041,7 @@ input {
     margin-top: 4vw;
   }
 
-  .detail_aria4 > .dAria4_clc {
+  .detail_aria4>.dAria4_clc {
     margin-top: 6vw;
     width: 80%;
     display: grid;
@@ -1009,18 +1049,18 @@ input {
     grid-gap: 2vw;
   }
 
-  .detail_aria4 > .dAria4_clc > div:first-child,
-  .detail_aria4 > div:nth-child(6) {
+  .detail_aria4>.dAria4_clc>div:first-child,
+  .detail_aria4>div:nth-child(6) {
     display: none;
   }
 
-  .detail_aria4 > .dAria4_clc > div > img {
+  .detail_aria4>.dAria4_clc>div>img {
     width: 34vw;
     height: 34vw;
     object-fit: cover;
   }
 
-  .detail_aria4 > .dAria4_clc > div {
+  .detail_aria4>.dAria4_clc>div {
     width: 34vw;
     height: 34vw;
   }
@@ -1029,11 +1069,11 @@ input {
     margin-top: -2vw;
   }
 
-  .detail_aria5 > div > img {
+  .detail_aria5>div>img {
     width: 60vw;
   }
 
-  .detail_aria3 > div:first-child {
+  .detail_aria3>div:first-child {
     background: url('./imgnew/mushroom.jpg') no-repeat fixed;
     background-size: cover;
     background-position: center center;
@@ -1044,29 +1084,34 @@ input {
     margin-left: 12vw;
   }
 
-  .d_box1 > button,
+  .d_box1>button,
   input {
     padding: 0.6vw 2vw;
   }
 
-  .d_community > div {
+  .d_community>div {
     display: flex;
   }
+
   .tape {
     width: 80px;
     z-index: 2;
   }
+
   .card:nth-child(2) {
     display: none;
   }
+
   .detail_ariaText,
   .cover:nth-child(1) {
     display: none;
   }
+
   .box {
     box-shadow: 1.2vw 1.2vw 2.4vw rgb(0 0 0 / 15%);
     padding: 2.19vw 2.4vw 2.4vw;
   }
+
   .card {
     position: relative;
     width: 28vw;
@@ -1092,26 +1137,32 @@ input {
     margin: 1vw 0.6vw;
     font-size: 0.6vw;
   }
+
   #d_img_1 div:nth-child(2) {
     top: 112vw;
   }
+
   .box {
     padding: 2vw 2.67vw 2.67vw;
   }
 }
+
 @media (max-width: 680px) {
   .detailList1 {
     margin-top: 28vw;
   }
-  .detailList1 > ul {
+
+  .detailList1>ul {
     margin-top: 26vw;
   }
+
   .btnB {
     height: 3.8vw;
     width: 16vw;
     margin: 1vw 0.6vw;
     font-size: 0.6vw;
   }
+
   #d_img_1 div:nth-child(2) {
     top: 116vw;
   }
@@ -1121,11 +1172,13 @@ input {
     height: 20vw;
     cursor: pointer;
   }
-  .d_box1 > button,
+
+  .d_box1>button,
   input {
     font-size: 9px;
   }
 }
+
 /* 모바일 사이즈 */
 @media (max-width: 499px) {
   .detailList1 {
@@ -1137,13 +1190,16 @@ input {
     top: 126vw;
   }
 }
+
 @media screen and (max-width: 414px) {
+
   /* #btnScrollToImotion #imotion {
     display: none;
   } */
-  #btnScroll > div:first-child {
+  #btnScroll>div:first-child {
     display: none;
   }
+
   .detailCnt1_1 {
     height: 106vw;
     display: flex;
@@ -1151,6 +1207,7 @@ input {
     justify-items: center;
     align-items: center;
   }
+
   .cnt1_1img {
     margin-top: 1vw;
     position: relative;
@@ -1170,6 +1227,7 @@ input {
     width: 68vw;
     height: 34vw;
   }
+
   .detailList1 {
     height: 4.7vw;
     margin-top: 38vw;
@@ -1187,27 +1245,30 @@ input {
     width: 68vw;
     line-height: 4vw;
   }
+
   .box2_box {
     padding: 2.6vw;
     line-height: 4vw;
   }
+
   .box3_box {
     width: 66vw;
     line-height: 6vw;
   }
 
-  .box3_box > h3 {
+  .box3_box>h3 {
     align-self: center;
     text-align: center;
     vertical-align: middle;
   }
 
-  .box3_box > h2 {
+  .box3_box>h2 {
     font-size: 14px;
     align-self: center;
     text-align: center;
     vertical-align: middle;
   }
+
   .btnB {
     height: 7.8vw;
     width: 28vw;
@@ -1220,12 +1281,14 @@ input {
   #d_img_1 div:nth-child(2) {
     top: 192vw;
   }
+
   #d_img_1 div h4,
   #d_img_2 div h4 {
     font-size: 10px;
     line-height: 16px;
     font-weight: lighter;
   }
+
   #d_img_1 div h2 {
     font-weight: lighter;
     font-size: 12px;
@@ -1241,21 +1304,24 @@ input {
     width: 38vw;
     height: 38vw;
   }
+
   .detail2_text {
     line-height: 18px;
     margin: 2vw;
     font-size: 8px;
     font-weight: lighter;
   }
+
   .detail_aria3 {
     margin-top: 10vw;
   }
+
   .detail_ariaText,
   .cover:nth-child(1) {
     display: none;
   }
 
-  .detail_aria3 > div:first-child {
+  .detail_aria3>div:first-child {
     background: url('./imgnew/mushroom.jpg') no-repeat center;
     background-size: cover;
   }
@@ -1266,7 +1332,7 @@ input {
     background-position: bottom;
   }
 
-  .d_box1 > button,
+  .d_box1>button,
   input {
     padding: 0.4vw 1vw;
     font-size: 0.2vw;
